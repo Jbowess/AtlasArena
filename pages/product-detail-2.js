@@ -147,10 +147,10 @@ export default function Home() {
                                     <div data-wow-delay="0s" className="wow fadeInRight product-item time-sales">
                                     <h6><i className="icon-clock" />Sale ends {saleEnds}</h6>
                                         <div className="content">
-                                            <div className="text">Sale Price</div>
+                                            <div className="text">Entry Price</div>
                                             <div className="flex justify-between">
                                                 <p>$7.99 <span>$15.99</span></p>
-                                                <Link href="#" className="tf-button style-1 h50 w216">Open Now<i className="icon-arrow-up-right2" /></Link>
+                                                <Link href="#" className="tf-button style-1 h50 w216">Enter Arena<i className="icon-arrow-up-right2" /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +274,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -297,7 +297,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -319,7 +319,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -341,7 +341,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -363,7 +363,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -385,7 +385,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -407,7 +407,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -429,7 +429,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -451,7 +451,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>
@@ -473,7 +473,7 @@ export default function Home() {
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Open Box</span></a>
+                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Enter Arena</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Razer Laptop</Link></h5>

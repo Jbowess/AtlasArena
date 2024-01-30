@@ -11,10 +11,7 @@ export default function Settings() {
                         <div className="tf-tsparticles">
                             <div id="tsparticles1" data-color="#161616" data-line="#000" />
                         </div>
-                        <div className="welcome-container">
-                            <h2 className="welcome-title">Welcome to Atlas, Fortunes Await.</h2>
-                        </div>                             <div className="flat-button flex">
-                            <Link href="#" className="tf-button style-2 h50 w230">Deposit Funds<i className="icon-arrow-up-right2" /></Link>
+                            <div className="flat-button flex">
                         </div>
                         <div className="bg-home7">
                             <AutoSlider1 />
@@ -34,10 +31,10 @@ export default function Settings() {
                             <div className="uploadfile flex">
                                 <img src="assets/images/avatar/avatar-07.png" alt="" />
                                 <div>
-                                    <h6>Upload a new champion”</h6>
+                                    <h6>Upload Avatar”</h6>
                                     <label>
                                         <input type="file" name="file" />
-                                        <span className="text filename">No files selected</span>
+                                        <span className="text filename"></span>
                                     </label>
                                     <p className="text">JPEG 100x100</p>
                                 </div>
@@ -107,11 +104,11 @@ export default function Settings() {
 
                             <fieldset className="password">
                                 <label>Old password</label>
-                                <input type="text" id="password" placeholder="Enter your Old password" name="password" tabIndex={2} aria-required="true" required />
+                                <input type="text" id="password" placeholder="Enter Old password" name="password" tabIndex={2} aria-required="true" required />
                             </fieldset>
                             <fieldset className="password">
                                 <label>New password</label>
-                                <input type="text" id="password" placeholder="Enter your New password" name="password" tabIndex={2} aria-required="true" required />
+                                <input type="text" id="password" placeholder="Enter New password" name="password" tabIndex={2} aria-required="true" required />
                             </fieldset>
                             <fieldset className="password">
                                 <label>Confirm password</label>
@@ -138,7 +135,7 @@ export default function Settings() {
                             <div className="notification-setting-item">
                                 <div className="content">
                                     <h6>New Items Notification</h6>
-                                    <p>Mauris a velit commodo erat lobortis eleifend</p>
+                                    <p>Will be notified of new loot boxes arriving to atlas arena</p>
                                 </div>
                                 <input className="check" type="checkbox" defaultValue="checkbox" name="check" />
                             </div>
