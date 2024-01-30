@@ -86,40 +86,38 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="canvas-nav-close" onClick={handleSidebar}>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="white" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 122.878 122.88" enableBackground="new 0 0 122.878 122.88" xmlSpace="preserve"><g><path d="M1.426,8.313c-1.901-1.901-1.901-4.984,0-6.886c1.901-1.902,4.984-1.902,6.886,0l53.127,53.127l53.127-53.127 c1.901-1.902,4.984-1.902,6.887,0c1.901,1.901,1.901,4.985,0,6.886L68.324,61.439l53.128,53.128c1.901,1.901,1.901,4.984,0,6.886 c-1.902,1.902-4.985,1.902-6.887,0L61.438,68.326L8.312,121.453c-1.901,1.902-4.984,1.902-6.886,0 c-1.901-1.901-1.901-4.984,0-6.886l53.127-53.128L1.426,8.313L1.426,8.313z" /></g></svg>
                             </div>
-                            <div className="widget-search mt-30">
+                            {/* <div className="widget-search mt-30">
                                 <form action="#" method="get" role="search" className="search-form relative">
                                     <input type="search" id="search" className="search-field style-1" placeholder="Search..." name="s" title="Search for" required />
                                     <button className="search search-submit" type="submit" title="Search">
                                         <i className="icon-search" />
                                     </button>
                                 </form>
-                            </div>
+                            </div> */}
                             <div className="widget widget-categories">
-                                <h5 className="title-widget">Categories</h5>
+                                <h5 className="title-widget">Menu</h5>
                                 <ul>
                                     <li>
-                                        <div className="cate-item"><Link href="#">NFTs</Link></div>
-                                        <div className="number">(1.483)</div>
+                                        <div className="cate-item"><Link href="#">HOME</Link></div>
                                     </li>
                                     <li>
-                                        <div className="cate-item"><Link href="#">Digital Art</Link></div>
-                                        <div className="number">(97)</div>
+                                        <div className="cate-item"><Link href="#">FAQ's</Link></div>
                                     </li>
                                     <li>
-                                        <div className="cate-item"><Link href="#">Crypto</Link></div>
-                                        <div className="number">(45)</div>
+                                        <div className="cate-item"><Link href="#">LOOT BOXES</Link></div>
                                     </li>
                                     <li>
-                                        <div className="cate-item"><Link href="#">Technology</Link></div>
-                                        <div className="number">(728)</div>
+                                        <div className="cate-item"><Link href="#">BATTLEPASS</Link></div>
                                     </li>
                                 </ul>
                             </div>
                             <div className="widget widget-menu style-4">
-                                <h5 className="title-widget">Company</h5>
+                                <h5 className="title-widget">Company Information</h5>
                                 <ul>
-                                    <li><Link href="#">Help center</Link></li>
-                                    <li><Link href="#">Platform status</Link></li>
+                                    <li><Link href="#">Contact</Link></li>
+                                    <li><Link href="#">How It Works</Link></li>
+                                    <li><Link href="#">Customer Support</Link></li>
+                                    <li><Link href="#">Discord Community</Link></li>
                                 </ul>
                             </div>
                             <div className="widget">

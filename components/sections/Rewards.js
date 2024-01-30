@@ -1,13 +1,7 @@
-import { Menu } from '@headlessui/react'
 import Link from "next/link"
 import { useState } from "react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import BidModal from "../elements/BidModal"
-import Countdown from "../elements/Countdown"
-import AutoSlider1 from '../slider/AutoSlider1'
-import AutoSlider2 from '../slider/AutoSlider2'
-const currentTime = new Date()
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -30,8 +24,26 @@ const swiperOptions = {
     }
 }
 
-
-
+const swiperOptions2 = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: false,
+    slidesPerView: 1,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 12,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+}
 
 
 export default function Rewards() {
@@ -59,12 +71,12 @@ export default function Rewards() {
         <>
             <div className="wrapper-content">
                 <div className="inner-content">
-                        <div className="themesflat-container">
                         <div className="heading-section">
-                            <h2 className="tf-title pb-30">Battle Pass</h2>
+                            <h2 className="tf-title pb-30">Battle Pass</h2> 
                         </div>
                             <div className="row">
-                                <div className="col-12 pages-title">
+                                <div className="col-12 pages-title">                            
+
                                     <div className="relative">
                                         <Swiper {...swiperOptions} className="swiper-container carousel3-type2">
                                             <div className="swiper-wrapper">
@@ -76,7 +88,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -88,7 +100,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -100,7 +112,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -112,7 +124,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -124,7 +136,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -136,7 +148,7 @@ export default function Rewards() {
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -144,7 +156,24 @@ export default function Rewards() {
                                         </Swiper>
                                     </div>
                                 </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp col-12">
+
+                                {/* <div id='account-bar2'>
+                                    <div id='account-bar-level2'>Battle Pass Rank 1</div>
+                                    <div id='xp-bar2'>
+                                    <div id='xp-bar-fill2'>
+                                        <div id='xp-increase-fx2'><div id='xp-increase-fx-flicker2'><div class='xp-increase-glow12'></div><div class='xp-increase-glow22'></div><div class='xp-increase-glow32'></div></div><div class='xp-increase-glow22'></div></div>
+                                    </div>
+                                    </div>
+                                    <div id='account-bar-next-level2'> 2</div>
+                                </div> */}
+
+<                           div data-wow-delay="0s" className="wow fadeInUp col-12">
+                                <div className="heading-section">
+                                    <h3 style={{ marginBottom: '20px' }}>Champion Rank Tiers</h3>
+                                    <button style={{ marginBottom: '20px' }}>Buy Premium Battle Pass</button>
+                                    <button style={{ marginBottom: '20px' }}>Buy Atlas Experience</button>
+
+                                </div>
                                     <div className="product-item offers">
                                         <h6><i className="icon-description" />Offers</h6>
                                         <i className="icon-keyboard_arrow_down" />
@@ -192,52 +221,146 @@ export default function Rewards() {
                                         </div>
                                     </div>
                                 </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp col-12">
-                                    <div className="product-item item-activity mb-0">
-                                        <h6><i className="icon-two-arrow rotateZ90" />Item activity</h6>
-                                        <i className="icon-keyboard_arrow_down" />
-                                        <div className="content">
-                                            <div className="table-heading">
-                                                <div className="column">Event</div>
-                                                <div className="column">Price</div>
-                                                <div className="column">Form</div>
-                                                <div className="column">To</div>
-                                                <div className="column">Date</div>
+
+
+                            <div className="themesflat-container">
+                                <div className="heading-section">
+                                    <h3 style={{ marginBottom: '10px', marginTop: '10px' }}>Free Atlas Capsules</h3>
+                                </div>
+                            <div className="row">
+                                <div className="col-12 pages-title">
+                                    <div className="content">
+                                  </div>
+                                    <div className="relative">
+                                        <Swiper {...swiperOptions2} className="swiper-container carousel3-type2">
+                                            <div className="swiper-wrapper">
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                        <a onClick={handleBidModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
                                             </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-two-arrow" />Transfer</div>
-                                                <div className="column">-/-</div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-sale" />Sale</div>
-                                                <div className="column"><h6 className="price gem"><i className="icon-gem" />0,0319</h6></div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-two-arrow" />Transfer</div>
-                                                <div className="column">-/-</div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-sale" />Sale</div>
-                                                <div className="column"><h6 className="price gem"><i className="icon-gem" />0,0319</h6></div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                        </div>
+                                        </Swiper>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                </div>
+
+
+
+                        <div className="themesflat-container">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <div className="heading-section-1">
+                                    <div className="heading-section">
+                                    <h3 style={{ marginBottom: '30px', marginTop: '-50px' }}>Frequently Asked Questions</h3>
+                                </div>                                    
+                                </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="flat-accordion">
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle">
+                                            <h6 className={isActive.key == 1 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(1)}>1. Why are NFTs becoming popular?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle">
+                                            <h6 className={isActive.key == 2 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(2)}>2. How do I keep my NFTs safe?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle">
+                                            <h6 className={isActive.key == 3 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(3)}>3. What is blockchain?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+                                                <p>Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. An asset can be tangible (a house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding). Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle">
+                                            <h6 className={isActive.key == 4 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(4)}>4. What is an NFT?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle">
+                                            <h6 className={isActive.key == 5 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(5)}>5. How do I set up my Ledger?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="flat-accordion2">
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle2">
+                                            <h6 className={isActive.key == 6 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(6)}>6. Why are NFTs becoming popular?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle2">
+                                            <h6 className={isActive.key == 7 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(7)}>7. How do I keep my NFTs safe?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 7 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle2">
+                                            <h6 className={isActive.key == 8 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(8)}>8. What is blockchain?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 8 ? "block" : "none"}` }}>
+                                                <p>Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. An asset can be tangible (a house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding). Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle2">
+                                            <h6 className={isActive.key == 9 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(9)}>9. What is an NFT?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 9 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                        <div data-wow-delay="0s" className="wow fadeInUp flat-toggle2">
+                                            <h6 className={isActive.key == 10 ? "toggle-title active" : "toggle-title"} onClick={() => handleToggle(10)}>10. How do I set up my Ledger?</h6>
+                                            <div className="toggle-content" style={{ display: `${isActive.key == 10 ? "block" : "none"}` }}>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                        </div>
                     
 
 
@@ -248,7 +371,6 @@ export default function Rewards() {
 
 
                     
-                </div>
                 <div className="side-bar">
                     <div className="widget widget-recently">
                         <h5 className="title-widget">Most Victorious Wins</h5>
@@ -364,7 +486,6 @@ export default function Rewards() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">2. </div>
@@ -375,7 +496,6 @@ export default function Rewards() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">3. </div>
@@ -386,7 +506,6 @@ export default function Rewards() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">4. </div>
@@ -397,7 +516,6 @@ export default function Rewards() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center">
                             <div className="order">5. </div>
@@ -408,10 +526,11 @@ export default function Rewards() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                     </div>
+                </div>                
                 </div>
+
         </>
     )
 }

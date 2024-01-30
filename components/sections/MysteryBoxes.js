@@ -2334,7 +2334,6 @@ export default function MysteryBoxes() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">2. </div>
@@ -2345,7 +2344,6 @@ export default function MysteryBoxes() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">3. </div>
@@ -2356,7 +2354,6 @@ export default function MysteryBoxes() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">4. </div>
@@ -2367,7 +2364,6 @@ export default function MysteryBoxes() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                         <div className="widget-creators-item flex items-center">
                             <div className="order">5. </div>
@@ -2378,7 +2374,6 @@ export default function MysteryBoxes() {
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
-                            <button className="follow">Follow</button>
                         </div>
                     </div>
                 </div>

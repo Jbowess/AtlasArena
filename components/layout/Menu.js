@@ -19,9 +19,9 @@ export default function Menu() {
                 <li className={router.pathname == "/rewards" ? "menu-item current-item" : "menu-item"}>
                     <Link href="/rewards">BATTLE PASS</Link>
                 </li>
-                <li className={router.pathname == "/affiliate" ? "menu-item current-item" : "menu-item"}>
+                {/* <li className={router.pathname == "/affiliate" ? "menu-item current-item" : "menu-item"}>
                     <Link href="/affiliate">AFFILIATE</Link>
-                </li>
+                </li> */}
             </ul>
         </>
     );

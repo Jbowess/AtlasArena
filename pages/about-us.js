@@ -64,10 +64,7 @@ export default function Home() {
                                 <div className="col-12 pages-title">
                                     <div className="content">
                                         <h1 data-wow-delay="0s" className="wow fadeInUp">FAQ's</h1>
-                                        <p data-wow-delay="0.1s" className="wow fadeInUp">Get started by learning the Atlas Arena Platform and how to compete in the arena</p>
-                                        <div data-wow-delay="0.2s" className="wow fadeInUp flat-button flex justify-center">
-                                            <Link href="#" className="tf-button style-1 h50 w190">Sign up <i className="icon-arrow-up-right2" /></Link>
-                                        </div>
+
                                     </div>
                                     <div className="icon-background">
                                         <img className="absolute item1" src="/assets/images/item-background/item11.png" alt="" />
