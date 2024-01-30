@@ -3585,7 +3585,7 @@ form label i.icon-star.active {
     padding: 70px 20px;
     overflow: hidden;
     background: linear-gradient(#181818, #181818) padding-box,
-      linear-gradient(290deg, transparent 5%, #e81cff, #40c9ff) border-box;
+      linear-gradient(290deg, transparent 6%, #e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     transition: all 0.4s ease-in-out;
     font-size: 16px;
