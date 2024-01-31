@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
+import LoginForm from "components/sections/LoginForm.js"
 
 const SignUpForm = ({ onClose }) => {
   console.log('SignupForm rendering'); // Add this line to see if the SignupForm is rendering
+  
+  const [isLogInModalOpen, setIsLogInModalOpen] = useState(false);
+
+  const openLogInModal = () => {
+    setIsLogInModalOpen(true);
+  };
+
+  const closeLogInModal = () => {
+    setIsLogInModalOpen(false);
+  };
+
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -138,10 +150,11 @@ const SignUpForm = ({ onClose }) => {
           </div>
           <button onClick={handleCreateAccount}>Create Account</button>
           <p style={{ textAlign: 'center', marginTop: '10px' }}>
-            Have an account? <a href="#" onClick={() => console.log('Sign In clicked')}>Sign In</a>
+            Have an account? <a href="#" onClick={openLogInModal}>Sign In</a>
           </p>
         </div>
       </div>
+      {isLogInModalOpen && <LoginForm onClose={closeLogInModal} />}
     </div>
   );
 };

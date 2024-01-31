@@ -969,7 +969,7 @@ label.error {
         background-color: rgba(22, 22, 22, 1);
         background-attachment: fixed;
 
-        background-image: url(../images/backgroup-section/Ninja15.png);    border-radius: 30px;
+        background-image: url(../images/backgroup-section/Ninja17.png);    border-radius: 30px;
         overflow: hidden;
         position: relative;
 }
@@ -2651,7 +2651,10 @@ body.background-white .tf-mouse-outer {
     -webkit-filter:blur(5px);
   }
 
-  /* BATTLE PASS XP BAR */
+
+
+
+  /* BATTLE PASS XP BAR2 */
 
 #account-bar-wrapper2{
     position:relative;
@@ -2667,20 +2670,20 @@ body.background-white .tf-mouse-outer {
     top:0px;
     left:0px;
     bottom: 0px;
-    width:7%;
+    width:100%;
     height:100px;
 
   }
   
   #account-bar-name2{
-    font-size:20px;
+    font-size: 12px;
     margin:15px 15px 0px 15px;
     display:inline-block;
     vertical-align:bottom;
   }
   
   #account-bar-level2{
-    font-size:26px;
+    font-size: 14px;
     display:inline-block;
     margin:15px 15px 0px 15px;
   }
@@ -2692,22 +2695,50 @@ body.background-white .tf-mouse-outer {
 
   }
   
-  #xp-bar2{
-    height:7px;
-    width: 120%;
-    background:#035;
-    margin:0px 0px 0px 15px;
-    display:inline-block;
-    vertical-align:middle;
-  }
+#xp-bar2 {
+    height: 40px;
+    width: 100%;
+    background: #035;
+    margin: 0px 0px 0px 15px;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+
+}
   
-  #xp-bar-fill2{
-    height:100%;
-    width:0.1%;
-    background:#3af;
-    font-size:12px;
-    line-height:10px;
-    text-align:right;
+#xp-bar-fill2 {
+    height: 100%;
+    width: 0%;
+    background: #3af;
+    font-size: 12px;
+    line-height: 10px;
+    position: absolute;
+    left: 0;
+    animation: fillAnimation 5s forwards;
+    z-index: 1; /* Set a lower z-index value */
+}
+
+@keyframes fillAnimation {
+    to {
+      width: 70%;
+    }
+  }
+  #xp-bar-fill3 {
+    height: 100%;
+    width: 0%;
+    background: #3af;
+    font-size: 12px;
+    line-height: 10px;
+    position: absolute;
+    left: 0;
+    animation: fillAnimation2 5s forwards;
+    z-index: 1; /* Set a lower z-index value */
+}
+
+@keyframes fillAnimation2 {
+    to {
+      width: 20%;
+    }
   }
   
 
@@ -2752,7 +2783,40 @@ body.background-white .tf-mouse-outer {
     border-radius:5px;
     -webkit-filter:blur(5px);
   }
+
+  #account-bar-level2-left,
+  #account-bar-rank2,
+  #account-bar-level2-right {
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: bottom;
+      color: #fff; /* Optional: Set text color to white or adjust as needed */
+      position: relative; /* Ensure positioning context for z-index to work */
+      z-index: 2; /* Set a higher z-index value */
+  }
   
+  #account-bar-level2-left {
+    position: absolute;
+    left: 0;
+    margin: 0px 0px 0px 15px; /* Adjusted margin for better alignment */
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+  
+  #account-bar-rank2 {
+    font-size: 20px;
+    display: inline-block;
+    color: #fff; /* Optional: Set text color to white or adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+}
+  #account-bar-level2-right {
+    position: absolute;
+    right: 0;
+    margin: 0px 15px 0px 0;
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+
 
 /* Signup Form */
 

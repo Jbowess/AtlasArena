@@ -364,9 +364,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <div className="swiper-pagination" />
-                <div className="swiper-button-next next-full" />
-                <div className="swiper-button-prev prev-full" />
+
             </Swiper>
             {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
         </>

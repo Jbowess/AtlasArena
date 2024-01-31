@@ -5,11 +5,13 @@ import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SignUpForm from "/components/sections/SignUpForm.js"
+import { useEffect, useRef } from 'react';
+
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     loop: false,
-    slidesPerView: 1,
+    slidesPerView: 3,
     observer: true,
     observeParents: true,
     spaceBetween: 12,
@@ -29,6 +31,27 @@ const swiperOptions = {
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })
+
+const swiperOptions2 = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: false,
+    slidesPerView: 5,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 12,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 6
+        },
+        1024: {
+            slidesPerView: 6
+        }
+    }
+}
 
 import { useState } from "react"
 export default function Home() {
@@ -64,73 +87,127 @@ export default function Home() {
             })
         }
     }
+
     return (
         <>
 
             <Layout headerStyle={1} footerStyle={1} pageCls="about-us-page">
 
                 <div>
-                    <div className="page-title about-us relative">
+                <div className="page-title about-us relative">
                         <div className="themesflat-container">
-                            <div className="row">
+                            <div className="heading-section">
                                 <div className="col-12 pages-title">
                                     <div className="content">
-                                        <h1 data-wow-delay="0s" className="wow fadeInUp">Battle Pass</h1>
+                                        <h1 data-wow-delay="0s" className="wow fadeInUp">Premium Battle Pass</h1>
                                     </div>
                                     <div className="icon-background">
                                         <img className="absolute item1" src="/assets/images/item-background/item11.png" alt="" />
                                         <img className="absolute item2" src="/assets/images/item-background/item10.png" alt="" />
                                         <img className="absolute item3" src="/assets/images/item-background/item12.png" alt="" />
                                         <img className="absolute item4" src="/assets/images/item-background/item13.png" alt="" />
-                                    </div>
+                                    </div>                                    
+                                </div>
+                        </div>
+                            <div className="row">
+                                <div className="col-12 pages-title">                            
+
                                     <div className="relative">
-                                        <Swiper {...swiperOptions} className="swiper-container carousel3-type2">
+                                        <Swiper {...swiperOptions2} className="swiper-container carousel3-type2" onClick={openSignUpModal}>
                                             <div className="swiper-wrapper">
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-5">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-5">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                            <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-5">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                            <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-5">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                            <a onClick={openSignUpModal} href="#" className="tf-button"><span>Claim</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -138,7 +215,50 @@ export default function Home() {
                                         </Swiper>
                                     </div>
                                 </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp col-12">
+
+                                <div id='account-bar2'>
+                                    <div id='xp-bar2'>
+                                        <div id='account-bar-level2-left'>LVL 2</div>
+                                        <div id='account-bar-rank2'>Battle Pass Rank</div>
+                                        <div id='account-bar-level2-right'>LVL 3</div>
+                                        <div id='xp-bar-fill2'>
+                                            <div id='xp-increase-fx2'>
+                                                <div id='xp-increase-fx-flicker2'>
+                                                    <div class='xp-increase-glow12'></div>
+                                                    <div class='xp-increase-glow22'></div>
+                                                    <div class='xp-increase-glow32'></div>
+                                                </div>
+                                                <div class='xp-increase-glow22'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div id='account-bar2'>
+                                    <div id='xp-bar2'>
+                                        <div id='account-bar-level2-left'>LVL 18</div>
+                                        <div id='account-bar-rank2'>Atlas Champion Rank</div>
+                                        <div id='account-bar-level2-right'>LVL 19</div>
+                                        <div id='xp-bar-fill3'>
+                                            <div id='xp-increase-fx2'>
+                                                <div id='xp-increase-fx-flicker2'>
+                                                    <div class='xp-increase-glow12'></div>
+                                                    <div class='xp-increase-glow22'></div>
+                                                    <div class='xp-increase-glow32'></div>
+                                                </div>
+                                                <div class='xp-increase-glow22'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+
+
+<                           div data-wow-delay="0s" className="wow fadeInUp col-12">
+                                <div className="heading-section">
+                                    <h3 style={{ marginBottom: '20px' }}>Champion Rank Tiers</h3>
+                                    <button onClick={openSignUpModal} style={{ marginBottom: '20px' }}>Buy Premium Battle Pass</button>
+                                    <button onClick={openSignUpModal} style={{ marginBottom: '20px' }}>Buy Atlas Experience</button>
+
+                                </div>
                                     <div className="product-item offers">
                                         <h6><i className="icon-description" />Offers</h6>
                                         <i className="icon-keyboard_arrow_down" />
@@ -186,52 +306,69 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp col-12">
-                                    <div className="product-item item-activity mb-0">
-                                        <h6><i className="icon-two-arrow rotateZ90" />Item activity</h6>
-                                        <i className="icon-keyboard_arrow_down" />
-                                        <div className="content">
-                                            <div className="table-heading">
-                                                <div className="column">Event</div>
-                                                <div className="column">Price</div>
-                                                <div className="column">Form</div>
-                                                <div className="column">To</div>
-                                                <div className="column">Date</div>
+
+
+                            <div className="themesflat-container">
+                                <div className="heading-section">
+                                    <h3 style={{ marginBottom: '-20px', marginTop: '10px' }}>Free Atlas Capsules</h3>
+                                </div>
+                            <div className="row">
+                                <div className="col-12 pages-title">
+                                    <div className="content">
+                                  </div>
+                                    <div className="relative">
+                                        <Swiper {...swiperOptions} className="swiper-container carousel3-type2">
+                                            <div className="swiper-wrapper">
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                            <a onClick={openSignUpModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <div className="tf-card-box style-6">
+                                                        <div className="card-media">
+                                                            <Link href="#">
+                                                                <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
+                                                            </Link>
+                                                        </div>
+                                                        <div className="button-place-bid">
+                                                        <a onClick={openSignUpModal} href="#" className="tf-button"><span>Open</span></a>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
                                             </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-two-arrow" />Transfer</div>
-                                                <div className="column">-/-</div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-sale" />Sale</div>
-                                                <div className="column"><h6 className="price gem"><i className="icon-gem" />0,0319</h6></div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-two-arrow" />Transfer</div>
-                                                <div className="column">-/-</div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                            <div className="table-item">
-                                                <div className="column flex items-center"><i className="icon-sale" />Sale</div>
-                                                <div className="column"><h6 className="price gem"><i className="icon-gem" />0,0319</h6></div>
-                                                <div className="column"><span className="tf-color">985DE3</span></div>
-                                                <div className="column"><span className="tf-color">Nosyu</span></div>
-                                                <div className="column">19h ago</div>
-                                            </div>
-                                        </div>
+                                        </Swiper>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+
+
+                        
+
+                        </div>
+                        </div>
+                        </div>
                     
                     
                     <div className="tf-section-2">

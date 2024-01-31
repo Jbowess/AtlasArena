@@ -124,6 +124,8 @@
     background-size: cover;
     background-attachment: fixed;
     margin-bottom: 30px;
+    background-image: 
+    url(../images/backgroup-section/bg-2.png);
 }
 
 /* button 
@@ -3464,6 +3466,8 @@ form label i.icon-star.active {
     -ms-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
+
+
 }
 
 #page.market-page #market {
@@ -3487,6 +3491,7 @@ form label i.icon-star.active {
     -ms-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
+    
 }
 
 .market-header .widget-search {
@@ -3730,7 +3735,11 @@ form label i.icon-star.active {
     gap: 29px;
     height: 100%;
     overflow-y: auto;
-    padding-bottom: 115px;
+    padding-bottom: 115px;    
+    background-image: 
+    url(../images/backgroup-section/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #page.market-page .section-menu-left::-webkit-scrollbar {
@@ -3765,7 +3774,7 @@ form label i.icon-star.active {
 .content-tabs .wrapper-content {
     width: 100%;
     display: flex;
-    gap: 40px;
+    gap: 40px; 
 }
 
 .content-tabs .wrapper-content .inner-content {

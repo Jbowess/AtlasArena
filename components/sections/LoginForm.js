@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
+import SignUpForm from "components/sections/SignUpForm.js"
 
 const LoginForm = ({ onClose }) => {
   console.log('LoginForm rendering');
+
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+  const openSignUpModal = () => {
+    setIsSignUpModalOpen(true);
+  };
+
+  const closeSignUpModal = () => {
+    setIsSignUpModalOpen(false);
+  };
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -43,10 +54,12 @@ const LoginForm = ({ onClose }) => {
             Sign In
           </button>
           <p style={{ fontSize: '12px', marginTop: '10px' }}>
-            Don't have an account? <a href="#sign-up" style={{ fontSize: '12px' }}>Sign Up.</a>
+            Don't have an account? <a href="#sign-up" style={{ fontSize: '12px' }} onClick={openSignUpModal} >Sign Up.</a>
           </p>
         </div>
       </div>
+      {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
+
     </div>
   );
 };

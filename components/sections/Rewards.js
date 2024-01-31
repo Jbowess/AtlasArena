@@ -81,7 +81,7 @@ export default function Rewards() {
                                         <Swiper {...swiperOptions} className="swiper-container carousel3-type2">
                                             <div className="swiper-wrapper">
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
@@ -93,7 +93,7 @@ export default function Rewards() {
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
@@ -105,7 +105,7 @@ export default function Rewards() {
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
@@ -117,7 +117,7 @@ export default function Rewards() {
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
@@ -129,7 +129,7 @@ export default function Rewards() {
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
@@ -141,7 +141,7 @@ export default function Rewards() {
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
-                                                    <div className="tf-card-box style-7">
+                                                    <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
                                                                 <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
@@ -157,15 +157,28 @@ export default function Rewards() {
                                     </div>
                                 </div>
 
-                                {/* <div id='account-bar2'>
-                                    <div id='account-bar-level2'>Battle Pass Rank 1</div>
-                                    <div id='xp-bar2'>
-                                    <div id='xp-bar-fill2'>
-                                        <div id='xp-increase-fx2'><div id='xp-increase-fx-flicker2'><div class='xp-increase-glow12'></div><div class='xp-increase-glow22'></div><div class='xp-increase-glow32'></div></div><div class='xp-increase-glow22'></div></div>
+                                <div id='account-bar2'>
+                                    <div id='xp-bar2'style={{ height: '20px', width: '97%', marginTop: "-10px", marginBottom: "-10px" }}>
+                                        <div id='account-bar-level2-left'>LVL 2</div>
+                                        <div id='account-bar-rank2'>Battle Pass Rank</div>
+                                        <div id='account-bar-level2-right'>LVL 3</div>
+                                        <div id='xp-bar-fill2'>
+                                            <div id='xp-increase-fx2'>
+                                                <div id='xp-increase-fx-flicker2'>
+                                                    <div class='xp-increase-glow12'></div>
+                                                    <div class='xp-increase-glow22'></div>
+                                                    <div class='xp-increase-glow32'></div>
+                                                </div>
+                                                <div class='xp-increase-glow22'></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
-                                    <div id='account-bar-next-level2'> 2</div>
-                                </div> */}
+                                </div> 
+
+
+
+
+
 
 <                           div data-wow-delay="0s" className="wow fadeInUp col-12">
                                 <div className="heading-section">
