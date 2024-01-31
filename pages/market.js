@@ -382,7 +382,7 @@ export default function Home() {
                                             Battle Pass
                                         </li>
                                         <li className={activeIndex === 4 ? "tablinks active" : "tablinks"} data-tabs="tf-collection" onClick={() => handleOnClick(4)}>
-                                            <svg width={22} height={22} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width={22} height={22} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> 
                                                 <g opacity="0.2">
                                                     <mask id="mask0_1075_14628" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x={1} y={1} width={20} height={20}>
                                                         <path fillRule="evenodd" clipRule="evenodd" d="M1.83398 1.83334H20.8059V20.7798H1.83398V1.83334Z" fill="white" />

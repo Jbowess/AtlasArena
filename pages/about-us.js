@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic'
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import SignUpForm from "/components/sections/SignUpForm.js"
+import { useState } from "react"
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -29,8 +31,18 @@ const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })
 
-import { useState } from "react"
 export default function Home() {
+
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+      setIsSignUpModalOpen(true);
+    };
+  
+    const closeSignUpModal = () => {
+      setIsSignUpModalOpen(false);
+    };
+
 
     const [isBidModal, setBidModal] = useState(false)
     const handleBidModal = () => setBidModal(!isBidModal)
@@ -478,7 +490,7 @@ export default function Home() {
                                     <div className="widget-income">
                                         <div className="title">Start Earning Real-Life Rewards While You Game Today</div>
                                         <p>get started with the highest rewarding and fair loot box gaming platform now.</p>
-                                        <Link href="#" className="tf-button style-1 h50 w190">Get started<i className="icon-arrow-up-right2" /></Link>
+                                        <button onClick={openSignUpModal} href="#" className="tf-button style-1 h50 w190">Get started<i className="icon-arrow-up-right2" /></button>
                                         <div className="image">
                                             <img className="icon-1" src="/assets/images/item-background/item11.png" alt="" />
                                             <img className="icon-2" src="/assets/images/item-background/item12.png" alt="" />
@@ -492,6 +504,7 @@ export default function Home() {
                     </div>
                 </div>
                 <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+                {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
             </Layout>
         </>
     )

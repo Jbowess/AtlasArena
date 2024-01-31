@@ -3,11 +3,20 @@
 import { Menu } from '@headlessui/react'
 import Link from "next/link"
 import BidModal from '../elements/BidModal'
-
+import SignUpForm from "./SignUpForm"
 import { useState } from "react"
+
+
 export default function DiscoverItem6() {
-    const [isBidModal, setBidModal] = useState(false)
-    const handleBidModal = () => setBidModal(!isBidModal)
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+      setIsSignUpModalOpen(true);
+    };
+  
+    const closeSignUpModal = () => {
+      setIsSignUpModalOpen(false);
+    };
     return (
         <>
             <div className="tf-section-3 discover-item ">
@@ -16,7 +25,7 @@ export default function DiscoverItem6() {
                         <div className="col-md-12">
                             <div className="heading-section pb-30">
                                 <h2 className="tf-title ">Featured Loot Boxes</h2>
-                                <Link href="/explore-3" >View All Boxes <i className="icon-arrow-right2" /></Link>
+                                <Link href="/explore-1" >View All Boxes <i className="icon-arrow-right2" /></Link>
                                 <p className="tf-subtitle">Experience unparalleled excitement with our powerhouse loot boxes, featuring highly exclusive treasures. Defy limits, dominate the competitive arena, and prove your mastery with Atlas!</p>
 
                             </div>
@@ -204,27 +213,25 @@ export default function DiscoverItem6() {
                         <div className="col-md-12">
                             <div className="wrap-box-card style-1">
                                 <div data-wow-delay="0s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-41.jpg" alt="" />
-                                            </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="featured-countdown">
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -235,9 +242,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.1s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-42.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -245,17 +252,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -266,9 +273,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.2s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-43.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -276,17 +283,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -297,9 +304,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.3s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-44.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -307,17 +314,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -328,9 +335,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.4s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-45.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -338,17 +345,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -359,9 +366,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-46.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -369,17 +376,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -390,9 +397,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.1s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-47.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -400,17 +407,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -421,9 +428,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.2s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-48.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -431,17 +438,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -452,9 +459,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.3s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-41.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -462,7 +469,7 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -472,7 +479,7 @@ export default function DiscoverItem6() {
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -483,9 +490,9 @@ export default function DiscoverItem6() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.4s" className="wow fadeInUp col-item">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
-                                            <Link href="#">
+                                            <Link href="">
                                                 <img src="/assets/images/box-item/card-item-42.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
@@ -493,17 +500,17 @@ export default function DiscoverItem6() {
                                                 <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">03</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">43</span><span className="countdown__label">s</span></span></div></span>
                                             </div>
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a  className="tf-button"><span>Open Now</span></a>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                        <h5 className="name">Dayco serpentine belt</h5>
                                         <div className="author flex items-center">
                                             <div className="avatar">
                                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                                             </div>
                                             <div className="info">
                                                 <span>Created by:</span>
-                                                <h6><Link href="/author-2">Marvin McKinney</Link> </h6>
+                                                <h6>Marvin McKinney</h6>
                                             </div>
                                         </div>
                                         <div className="divider" />
@@ -518,7 +525,7 @@ export default function DiscoverItem6() {
                     </div>
                 </div>
             </div>
-            <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+            {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
         </>
     )
 }

@@ -13,7 +13,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules"
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     loop: false,
-    slidesPerView: 2,
+    slidesPerView: 6,
     observer: true,
     grabCursor: true,
     observeParents: true,
@@ -42,6 +42,44 @@ const swiperOptions = {
         }
     }
 }
+
+const swiperOptions2 = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: false,
+    slidesPerView: 4,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 30,
+    navigation: {
+        clickable: true,
+        nextEl: '.slider-next',
+        prevEl: '.slider-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 30
+        }
+    }
+}
+
+
 const currentTime = new Date()
 
 export default function Home() {
@@ -505,7 +543,155 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="col-md-12">
-                                    <FeaturedSlider1 />
+                                <div className="featured pt-10 swiper-container carousel">
+                                    <Swiper {...swiperOptions2}>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@KathrynMurphy</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="tf-card-box style-1" >
+                                                <div className="card-media">
+                                                    <Link href="#">
+                                                        <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
+                                                    </Link>
+                                                    <span className="wishlist-button icon-heart" />
+                                                </div>
+                                                <h5 className="name">Dayco serpentine belt</h5>
+                                                <div className="author flex items-center">
+                                                    <div className="info">
+                                                        <span>Created by:</span>
+                                                        <h6>@CodyFisher</h6>
+                                                    </div>
+                                                </div>
+                                                <div className="divider" />
+                                            </div>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                    </div>                                
                                 </div>
                             </div>
                         </div>

@@ -3,10 +3,19 @@ import Layout from "@/components/layout/Layout"
 import { Menu } from '@headlessui/react'
 import Link from "next/link"
 import { useState } from "react"
-export default function Home() {
-    const [isBidModal, setBidModal] = useState(false)
-    const handleBidModal = () => setBidModal(!isBidModal)
+import SignUpForm from "components/sections/SignUpForm.js"
 
+
+export default function Home() {
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+      setIsSignUpModalOpen(true);
+    };
+  
+    const closeSignUpModal = () => {
+      setIsSignUpModalOpen(false);
+    };
     return (
         <>
 
@@ -89,15 +98,17 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -118,14 +129,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-36.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -146,14 +157,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-37.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -174,14 +185,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-38.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -202,14 +213,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -230,14 +241,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -258,14 +269,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -286,14 +297,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -314,14 +325,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-19.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -342,14 +353,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-20.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -370,14 +381,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-21.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -398,14 +409,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-22.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -426,14 +437,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-27.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -454,14 +465,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-28.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -482,14 +493,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-29.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -510,14 +521,14 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1">
+                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
                                         <div className="card-media">
                                             <Link href="#">
                                                 <img src="/assets/images/box-item/card-item-30.jpg" alt="" />
                                             </Link>
                                             <span className="wishlist-button icon-heart" />
                                             <div className="button-place-bid">
-                                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                                             </div>
                                         </div>
                                         <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -538,8 +549,8 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 load-more">
-                                    <a id="button-loadmore" className="tf-button-loadmore">
-                                        <span>Load More</span>
+                                    <a id="button-loadmore" className="tf-button-loadmore" onClick={openSignUpModal}>
+                                        <span >Load More</span>
                                         <i className="icon-loading-1" />
                                     </a>
                                 </div>
@@ -548,7 +559,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+                {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
             </Layout>
         </>
     )

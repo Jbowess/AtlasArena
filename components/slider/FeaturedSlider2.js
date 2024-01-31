@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import SignUpForm from "components/sections/SignUpForm.js"
+
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -44,8 +46,16 @@ import { useState } from "react"
 import BidModal from "../elements/BidModal"
 const currentTime = new Date()
 export default function FeaturedSlider2() {
-    const [isBidModal, setBidModal] = useState(false)
-    const handleBidModal = () => setBidModal(!isBidModal)
+
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+      setIsSignUpModalOpen(true);
+    };
+  
+    const closeSignUpModal = () => {
+      setIsSignUpModalOpen(false);
+    };
     return (
         <>
             {/* <Swiper {...swiperOptions} className="abc">
@@ -54,10 +64,10 @@ export default function FeaturedSlider2() {
 
 
             <Swiper {...swiperOptions} className="featured pt-10 swiper-container carouselfull">
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
-                            <Link href="#">
+                            <Link href="">
                                 <img src="/assets/images/box-item/card-item-16.jpg" alt="" />
                             </Link>
                             <span className="wishlist-button icon-heart" />
@@ -65,16 +75,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -84,7 +94,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -95,16 +105,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-02.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -114,7 +124,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -125,16 +135,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-03.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -144,7 +154,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -155,16 +165,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-04.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -174,7 +184,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -185,16 +195,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-05.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -204,7 +214,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -215,16 +225,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -234,7 +244,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -245,16 +255,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-02.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -264,7 +274,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -275,16 +285,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-03.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -294,7 +304,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -305,16 +315,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-04.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -324,7 +334,7 @@ export default function FeaturedSlider2() {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box style-1">
                         <div className="card-media">
                             <Link href="#">
@@ -335,16 +345,16 @@ export default function FeaturedSlider2() {
                                 <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
-                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                        <h5 className="name">Dayco serpentine belt</h5>
                         <div className="author flex items-center">
                             <div className="avatar">
                                 <img src="/assets/images/avatar/avatar-box-05.jpg" alt="Image" />
                             </div>
                             <div className="info">
-                                 <h6><Link href="/author-2">Leslie Alexander</Link></h6>
+                                 <h6>Leslie Alexander</h6>
                             </div>
                         </div>
                         <div className="divider" />
@@ -358,7 +368,7 @@ export default function FeaturedSlider2() {
                 <div className="swiper-button-next next-full" />
                 <div className="swiper-button-prev prev-full" />
             </Swiper>
-            <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+            {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
         </>
     )
 }

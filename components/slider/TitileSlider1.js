@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Autoplay, EffectCoverflow, FreeMode, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import BidModal from "../elements/BidModal"
+import SignUpForm from "components/sections/SignUpForm.js"
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation, FreeMode, EffectCoverflow],
@@ -59,8 +59,15 @@ import Countdown from '@/components/elements/Countdown'
 import { useState } from "react"
 
 export default function TitileSlider1() {
-    const [isBidModal, setBidModal] = useState(false)
-    const handleBidModal = () => setBidModal(!isBidModal)
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+      setIsSignUpModalOpen(true);
+    };
+  
+    const closeSignUpModal = () => {
+      setIsSignUpModalOpen(false);
+    };
     const currentTime = new Date()
     const timerx = <Countdown endDateTime={currentTime.setDate(currentTime.getDate() + 2)} />
     return (
@@ -68,7 +75,7 @@ export default function TitileSlider1() {
 
 
             <Swiper {...swiperOptions} className="swiper swiper-3d-7 swiper-container-horizontal">
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -79,16 +86,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -99,16 +106,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -119,16 +126,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -139,16 +146,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -159,16 +166,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -179,16 +186,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -199,16 +206,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -219,16 +226,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -239,16 +246,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -259,16 +266,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -279,16 +286,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -299,16 +306,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -319,16 +326,16 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
-                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                            <h5 className="name">Dayco serpentine belt</h5>
                             <h6 className="price gem"><i className="icon-gem" />0,34</h6>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide onClick={openSignUpModal}>
                     <div className="tf-card-box">
                         <div className="card-media">
                             <Link href="#">
@@ -339,7 +346,7 @@ export default function TitileSlider1() {
                                 {timerx}
                             </div>
                             <div className="button-place-bid">
-                                <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
                             </div>
                         </div>
                         <div className="meta-info text-center">
@@ -353,7 +360,7 @@ export default function TitileSlider1() {
             </Swiper>
             <div className="swiper-button-next next-3d over" />
             <div className="swiper-button-prev prev-3d over" />
-            <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+            {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
 
         </>
     )
