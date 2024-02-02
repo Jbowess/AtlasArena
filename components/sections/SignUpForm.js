@@ -26,9 +26,7 @@ const SignUpForm = ({ onClose }) => {
     const [promoAgreement, setPromoAgreement] = useState(false);
     const [termsAgreement, setTermsAgreement] = useState(false);
 
-    const handleCreateAccount = () => {
-        // Add your logic for creating an account
-        // You can use the form data here
+    const handleCreateAccount = async () => {
         const formData = {
             email,
             password,
@@ -41,7 +39,24 @@ const SignUpForm = ({ onClose }) => {
             promoAgreement,
             termsAgreement,
         };
-        console.log(formData); // Displaying form data for demonstration
+        try {
+          const response = await fetch('/api/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+    
+          if (response.ok) {
+            console.log("Account created successfully!");
+          } else {
+            console.error("Failed to create account");
+            console.log(response.status, response.statusText);
+          }
+        } catch (error) {
+          console.error("Error creating account:", error);
+        }
     }
 
   return (

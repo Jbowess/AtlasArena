@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
 import SignUpForm from "../../sections/SignUpForm"; 
