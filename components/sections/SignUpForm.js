@@ -52,7 +52,6 @@ const SignUpForm = ({ onClose }) => {
             console.log("Account created successfully!");
           } else {
             console.error("Failed to create account");
-            console.log(response.status, response.statusText);
           }
         } catch (error) {
           console.error("Error creating account:", error);

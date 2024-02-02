@@ -17,14 +17,31 @@ const LoginForm = ({ onClose }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignIn = () => {
+  const handleSignIn = async () => {
     // Add your logic for signing in
     // You can use the email and password here
-    const signInData = {
+    const formData = {
       email,
       password,
     };
-    console.log(signInData); // Displaying form data for demonstration
+
+    try {
+      const response = await fetch('/api/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Logged In Successfully");
+      } else {
+        console.error("Failed to Log In");
+      }
+    } catch (error) {
+      console.error("Error Logging In:", error);
+    }
   };
 
   return (
