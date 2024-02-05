@@ -646,11 +646,11 @@ select {
 }
 
 select option{
-    padding: 15px 26px;
-    font-size: 15px;
+    padding: 10px 10px;
+    font-size: 12px;
     line-height: 24px;
-    color: #1F1F2C;
-    background-color: #fff;
+    color: #e7e7e7;
+    background-color: #181818;
 }
 
 textarea,
@@ -3063,6 +3063,35 @@ button:hover {
     margin-top: 10px; /* Adjust top margin */
 }
 
+.right-side input.invalid {
+    border: 1px solid #ff0000; /* Red border color */
+    background-color: #1b121d; /* Red background color */
+}
+
+/* Add these styles to your existing CSS file or style tag */
+
+.loading-message,
+.success-message,
+.error-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  width: 98%;
+}
+
+.success-message {
+  background-color: #28a745; /* Green background for success message */
+  color: #fff; /* White text color */
+}
+
+.error-message {
+  background-color: #dc3545; /* Red background for error message */
+  color: #fff; /* White text color */
+}
+
+
 
 
 /* Login Form */
@@ -3591,3 +3620,6 @@ button-specific:hover {
     margin-bottom: 15px; /* Reduced margin for better spacing */
 
   }
+
+
+  

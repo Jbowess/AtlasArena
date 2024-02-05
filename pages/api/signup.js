@@ -39,7 +39,6 @@ export default async function handler(req, res) {
 
     const result = await collection.insertOne(formData);
 
-    console.log(`${result.insertedCount} documents were inserted`);
 
     res.status(200).json({ success: true });
   } finally {
