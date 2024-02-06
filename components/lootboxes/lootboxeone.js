@@ -79,7 +79,7 @@ const swiperOptions2 = {
 
 const currentTime = new Date()
 
-export default function Home() {
+export default function Home({onClose}) {
     
     const [isBidModal, setBidModal] = useState(false)
     const handleBidModal = () => setBidModal(!isBidModal)
@@ -116,8 +116,9 @@ export default function Home() {
     }, []);
     return (
         <>
+            <div className="loot-box-container">   
 
-
+                <div className="wrapper-content">
                 <div>
                     <div className="tf-section-2 product-detail">
                         <div className="themesflat-container">
@@ -135,29 +136,8 @@ export default function Home() {
                                     <div data-wow-delay="0s" className="wow fadeInRight infor-product">
                                         <div className="text">Atlas Arena <span className="icon-tick"><span className="path1" /><span className="path2" /></span></div>
                                         <div className="menu_card">
-                                            <Menu as="div" className="dropdown">
-                                                <div className="icon">
-                                                    <Menu.Button as="a" className="btn-link" aria-expanded="false">
-                                                        <i className="icon-link-1" />
-                                                    </Menu.Button>
-                                                    <Menu.Items as="div" className="dropdown-menu show d-block">
-                                                        <Link className="dropdown-item" href="#"><i className="icon-link" />Copy link</Link>
-                                                        <Link className="dropdown-item" href="#"><i className="icon-facebook" />Share on facebook</Link>
-                                                        <Link className="dropdown-item mb-0" href="#"><i className="icon-twitter" />Share on twitter</Link>
-                                                    </Menu.Items>
-                                                </div>
-                                            </Menu>
-                                            <Menu as="div" className="dropdown">
-                                                <div className="icon">
-                                                    <Menu.Button as="a" className="btn-link" aria-expanded="false">
-                                                        <i className="icon-content" />
-                                                    </Menu.Button>
-                                                    <Menu.Items as="div" className="dropdown-menu show d-block">
-                                                        <Link className="dropdown-item" href="#"><i className="icon-refresh" />Refresh metadata</Link>
-                                                        <Link className="dropdown-item mb-0" href="#"><i className="icon-report" />Report</Link>
-                                                    </Menu.Items>
-                                                </div>
-                                            </Menu>
+                                        <div className="close-button2" onClick={onClose}></div>
+
                                         </div>
                                         <h2>Razer Budget Box</h2>
                                         <div className="author flex items-center mb-30">
@@ -692,6 +672,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                </div>
+                
                 </div>
 
         </>

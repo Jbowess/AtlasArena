@@ -3454,7 +3454,7 @@ button-specific:hover {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    z-index: 2000;
     animation: fadeIn 0.5s ease both;
 	&::backdrop {
 		animation: fadeIn 0.5s ease both;
@@ -3477,6 +3477,7 @@ button-specific:hover {
     max-width: 400px;
     padding: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
   }
   
   .close-button {
@@ -3647,6 +3648,64 @@ button-specific:hover {
     margin-bottom: 15px; /* Reduced margin for better spacing */
 
   }
+  .close-button2 {
+    position: absolute; /* Change to absolute */
+    top: 20px;
+    right: 20px; /* Adjust as needed */
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    background: #e239cc;
+    padding: 3px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 30%;
 
+}
 
-  
+.close-button2:before {
+    content: "x";
+    font-weight: 600;
+    background-color: #181818;
+    border-radius: 30%;
+    padding: 10px 15px;
+}
+
+.close-button2:hover {
+    color: #e239cc;
+    background-color: #e239cc;
+}
+
+.close-button2:focus {
+    box-shadow: 0 0 0 3px rgba(253, 0, 0, 0.3);
+}
+
+  /*LootBox Window*/
+
+  .loot-box-container {
+    position: absolute;
+    padding-left: 100px;
+    padding-bottom: 400px;
+    top: 0;
+    left: 218px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #122627, #214749, #261841, #1a1227, #0e0a15); /* Match market page background */
+    z-index: 100;
+    animation: fadeIn 0.5s ease both;
+
+    &::backdrop {
+        animation: fadeIn 0.5s ease both;
+        background: rgb(255 255 255 / 40%);
+        z-index: 2;
+        backdrop-filter: blur(20px);
+    }
+}

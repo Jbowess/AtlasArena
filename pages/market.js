@@ -12,19 +12,28 @@ import { useState } from "react"
 import { useRouter } from 'next/router';
 import CheckoutModal from '@/components/sections/CheckoutModal'; // Update the path
 import AddFundsModal from '@/components/sections/AddFundsModal'; // Import your AddFundsModal component
-
-
+import LootBoxOne from 'pages/product-detail-2';
 
 export default function Home() {
-
+ 
     const router = useRouter(); // Initialize the router
     const userData = router.query.userData ? JSON.parse(router.query.userData) : null;
     console.log(userData)
+
+    const [activeIndex, setActiveIndex] = useState(1)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
     const [isFundsModalOpen, setIsFundsModalOpen] = useState(false);
     const [accountBalance, setAccountBalance] = useState(0.00);
-    
+
+    const handleLootBoxClick = (newIndex) => {
+        // Update your state or perform any action with the new index here
+        setActiveIndex(newIndex);
+    };
+
+    const handleOnClick = (index) => {
+        setActiveIndex(index)
+    }
     const [cartItems, setCartItems] = useState([
         { name: 'Gucci Belt', price: '$100' },
         { name: 'Iphone Case', price: '$50' },
@@ -49,10 +58,6 @@ export default function Home() {
         setCartItems([...cartItems, cardData]);
       };
 
-    const [activeIndex, setActiveIndex] = useState(1)
-    const handleOnClick = (index) => {
-        setActiveIndex(index)
-    }
 
     const [isToggled, setToggled] = useState(false)
     const handleToggle = () => setToggled(!isToggled)
@@ -460,6 +465,9 @@ export default function Home() {
                             </div>
                             <div id="settings" className={activeIndex === 8 ? "tabcontent active" : "tabcontent"}>
                                 <Settings />
+                            </div>
+                            <div id="LootBoxOne" className={activeIndex === 10 ? "tabcontent active" : "tabcontent"}>
+                                <Market onLootBoxClick={handleLootBoxClick}/>
                             </div>
                         </div>
                     </div>

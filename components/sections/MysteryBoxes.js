@@ -2,12 +2,10 @@ import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 import { useState } from "react"
 import BidModal from '../elements/BidModal'
-import AutoSlider1 from '../slider/AutoSlider1'
-import AutoSlider2 from '../slider/AutoSlider2'
 const currentTime = new Date()
-
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import LootBoxOne from '../lootboxes/lootboxeone'
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -62,9 +60,21 @@ const swiperOptions2 = {
     }
 }
 
-export default function MysteryBoxes() {
+export default function MysteryBoxes({}) {
     const [isBidModal, setBidModal] = useState(false)
     const handleBidModal = () => setBidModal(!isBidModal)
+    
+    const [showLootBoxOne, setShowLootBoxOne] = useState(false)
+    const handleLootBoxOne = (e) => {
+        e.preventDefault(); // Prevent the default behavior of the link
+        setShowLootBoxOne(true); // Updated function name
+        console.log("form clicked");
+    };
+    const handleCloseLootBoxOne = () => {
+        setShowLootBoxOne(false); // Updated function name
+    };
+
+
 
     const [activeIndex, setActiveIndex] = useState(1)
     const handleOnClick = (index) => {
@@ -223,7 +233,7 @@ export default function MysteryBoxes() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
                                             <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
@@ -2378,8 +2388,14 @@ export default function MysteryBoxes() {
                     </div>
                 </div>
             </div>
-
-            <BidModal handleBidModal={handleBidModal} isBidModal={isBidModal} />
+            {showLootBoxOne && (
+                <>
+                    {console.log('Rendering LootBoxOne')}
+                    <LootBoxOne onClose={handleCloseLootBoxOne} />
+                </>
+            )}
+            
         </>
-    )
+    )    
+
 }
