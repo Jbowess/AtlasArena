@@ -2831,7 +2831,13 @@ body.background-white .tf-mouse-outer {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    
+    animation: fadeIn 0.5s ease both;
+	&::backdrop {
+		animation: fadeIn 0.5s ease both;
+		background: rgb(255 255 255 / 40%);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
 }
 
 .signup-form {
@@ -3106,6 +3112,13 @@ button:hover {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    animation: fadeIn 0.5s ease both;
+	&::backdrop {
+		animation: fadeIn 0.5s ease both;
+		background: rgb(255 255 255 / 40%);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
 }
 
 .login-form-specific {
@@ -3233,6 +3246,13 @@ button-specific:hover {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    animation: fadeIn 0.5s ease both;
+	&::backdrop {
+		animation: fadeIn 0.5s ease both;
+		background: rgb(255 255 255 / 40%);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
 }
 
 .checkout-form {
@@ -3435,6 +3455,13 @@ button-specific:hover {
     justify-content: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    animation: fadeIn 0.5s ease both;
+	&::backdrop {
+		animation: fadeIn 0.5s ease both;
+		background: rgb(255 255 255 / 40%);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
   }
   
   .modal-container {
