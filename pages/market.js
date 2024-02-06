@@ -8,7 +8,6 @@ import Market from "@/components/sections/MysteryBoxes"
 import Settings from "@/components/sections/Settings"
 import Wallet from "@/components/sections/Wallet"
 import Link from "next/link"
-import CheckoutPage from 'C:\\Users\\61412\\Documents\\Business\\Atlas Arena\\Production\\open9\\pages\\checkout';
 import { useState } from "react"
 import { useRouter } from 'next/router';
 import CheckoutModal from '@/components/sections/CheckoutModal'; // Update the path
@@ -19,6 +18,8 @@ import AddFundsModal from '@/components/sections/AddFundsModal'; // Import your 
 export default function Home() {
 
     const router = useRouter(); // Initialize the router
+    const userData = router.query.userData ? JSON.parse(router.query.userData) : null;
+    console.log(userData)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
     const [isFundsModalOpen, setIsFundsModalOpen] = useState(false);

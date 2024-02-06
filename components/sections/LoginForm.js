@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import SignUpForm from "components/sections/SignUpForm.js"
+import { useRouter } from 'next/router';
+import SignUpForm from "components/sections/SignUpForm.js";
 
 const LoginForm = ({ onClose }) => {
-  console.log('LoginForm rendering');
+
+  const router = useRouter(); 
 
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
@@ -16,6 +18,7 @@ const LoginForm = ({ onClose }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginStatus, setLoginStatus] = useState({});
 
   const handleSignIn = async () => {
     // Add your logic for signing in
@@ -34,13 +37,24 @@ const LoginForm = ({ onClose }) => {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        console.log("Logged In Successfully");
-      } else {
-        console.error("Failed to Log In");
+    if (response.ok) {
+      const { success, message, userData } = await response.json();
+      setLoginStatus({ success, message });
+
+      // Navigate to the market.js page with user information
+      if (success) {
+        router.push({
+          pathname: '/market',
+          query: { userData: JSON.stringify(userData) },
+        });
+      }
+          } else {
+        const data = await response.json();
+        setLoginStatus({ success: false, message: data.message || 'Invalid credentials' });
       }
     } catch (error) {
       console.error("Error Logging In:", error);
+      setLoginStatus({ success: false, message: 'An unexpected error occurred' });
     }
   };
 
@@ -70,13 +84,21 @@ const LoginForm = ({ onClose }) => {
           <button className="button-specific" onClick={handleSignIn}>
             Sign In
           </button>
+          
+          {loginStatus.success && (
+            <div className="success-message">{loginStatus.message}</div>
+          )}
+
+          {(!loginStatus.success && loginStatus.message) && (
+            <div className="error-message">{loginStatus.message}</div>
+          )}
+
           <p style={{ fontSize: '12px', marginTop: '10px' }}>
             Don't have an account? <a href="#sign-up" style={{ fontSize: '12px' }} onClick={openSignUpModal} >Sign Up.</a>
           </p>
         </div>
       </div>
       {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
-
     </div>
   );
 };
