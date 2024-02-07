@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
-
+import TierWindow from "./tierwindow";
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -84,6 +84,17 @@ export default function Home({onClose}) {
     const [isBidModal, setBidModal] = useState(false)
     const handleBidModal = () => setBidModal(!isBidModal)
     const [saleEnds, setSaleEnds] = useState(null);
+
+    const [showTierWindow, setShowTierWindow] = useState(false)
+        const handleTierWindow = (e) => {
+            e.preventDefault();
+            setShowTierWindow(true);
+        };
+        const handleCloseTierWindow = () => {
+            setShowTierWindow(false);
+        };
+
+
 
     useEffect(() => {
       // Calculate the future date and time
@@ -164,7 +175,7 @@ export default function Home({onClose}) {
                                             <div className="text">Entry Price</div>
                                             <div className="flex justify-between">
                                                 <p>$7.99 <span>$15.99</span></p>
-                                                <Link href="#" className="tf-button style-1 h50 w216">Enter Arena<i className="icon-arrow-up-right2" /></Link>
+                                                <Link onClick={handleTierWindow} href="#" className="tf-button style-1 h50 w216">Enter Arena<i className="icon-arrow-up-right2" /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -280,7 +291,12 @@ export default function Home({onClose}) {
                                 </div>
                                 
 
-                                
+                                <div className="col-md-12">
+                                                <div className="heading-section">
+                                                    <h2 className="tf-title pb-30">Loot Tiers
+                                                    </h2>
+                                                </div>
+                                            </div>
                                 <div className="trait-item">
                                     <div className="tf-card-box">
                                         <div className="card-media">
@@ -674,7 +690,12 @@ export default function Home({onClose}) {
                     </div>
                 </div>
                 </div>
-                
+                {showTierWindow && (
+                    <>
+                    {console.log('Rendering Tier Window')}
+                    <TierWindow onClose={handleCloseTierWindow} />
+                    </>
+                )}
                 </div>
 
         </>

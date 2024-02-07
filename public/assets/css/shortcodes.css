@@ -3747,9 +3747,11 @@ form label i.icon-star.active {
     overflow-y: auto;
     padding-bottom: 115px;    
     background-image: 
-    url(../images/backgroup-section/bg-2.png);
+    url(../images/item-background/panebackground.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
+    
 }
 
 #page.market-page .section-menu-left::-webkit-scrollbar {
@@ -4974,7 +4976,7 @@ img {
 
 /* infor-product */
 .infor-product > .text {
-    color: #7a30ac;
+    color: #9900ff;
     font-size: 14px;
     font-weight: 800;
     line-height: 19px;

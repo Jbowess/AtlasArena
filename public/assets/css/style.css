@@ -946,6 +946,11 @@ label.error {
 .justify-between {
     justify-content: space-between;
 }
+.justify-between2 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
 .items-center {
     align-items: center;
 }
@@ -969,7 +974,7 @@ label.error {
         background-color: rgba(22, 22, 22, 1);
         background-attachment: fixed;
 
-        background-image: url(../images/backgroup-section/Ninja17.png);    border-radius: 30px;
+        background-image: url(../images/backgroup-section/Ninja7.jpg);    border-radius: 30px;
         overflow: hidden;
         position: relative;
 }
@@ -3708,4 +3713,42 @@ button-specific:hover {
         z-index: 2;
         backdrop-filter: blur(20px);
     }
+}
+
+
+.tierwindow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease both;
+	&::backdrop {
+		animation: fadeIn 0.5s ease both;
+		background: rgb(255 255 255 / 40%);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
+}
+
+.tierwindow {
+    position: relative;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(10deg,transparent 0%,#36536e, #5b2d64) padding-box,
+    linear-gradient(220deg, transparent 0%,#e600ff, #40f2ff) border-box;
+    border: 2px solid transparent;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
 }
