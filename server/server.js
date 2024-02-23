@@ -1,6 +1,6 @@
 
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri = "mongodb+srv://admin:<Windowshp321!>@atlasarena.wtmdug6.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin2:HelloStranger@atlasarena.wtmdug6.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {

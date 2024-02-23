@@ -2,7 +2,7 @@
 
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
-const uri = "mongodb+srv://admin:<Windowshp321!>@atlasarena.wtmdug6.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin2:HelloStranger@atlasarena.wtmdug6.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
