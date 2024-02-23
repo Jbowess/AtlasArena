@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const uri = "mongodb+srv://admin:Windowshp321!@atlasarena.wtmdug6.mongodb.net/registration?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin2:HelloStranger@atlasarena.wtmdug6.mongodb.net/registration?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 export default async function handler(req, res) {
