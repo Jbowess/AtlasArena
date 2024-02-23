@@ -5,6 +5,8 @@ import TitileSlider1 from "../slider/TitileSlider1"
 import TitileSlider6 from "../slider/TitileSlider6"
 import TitileSlider7 from "../slider/TitileSlider7"
 import SignUpForm from "./SignUpForm"
+import AutoSlider1 from '../slider/AutoSlider1'
+import AutoSlider2 from '../slider/AutoSlider2'
 import { useState } from "react"
 
 export default function FlatTitle6() {
@@ -48,8 +50,9 @@ export default function FlatTitle6() {
                                 <img className="absolute item9" src="/assets/images/item-background/item1.png" alt="" />
                                 <img className="absolute item10" src="/assets/images/item-background/item2.png" alt="" />
                             </div>
+                            
                             <div className="bg-home7">
- 
+
                             </div>
                         </div>
                     </div>
