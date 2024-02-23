@@ -28,10 +28,10 @@ export default function AutoSlider1() {
         
                 <Swiper {...swiperOptions} className="swiper-container autoslider3reverse swiper-container-vertical ">
                     <SwiperSlide>
-                        <img src="/assets/images/item-background/bg-action-1.png" alt="" />
+                        <img src="/assets/images/item-background/box (2).png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/assets/images/item-background/bg-action-1.png" alt="" />
+                    <img src="/assets/images/item-background/box (1).png" alt="" />
                     </SwiperSlide>
                 </Swiper>
         </>

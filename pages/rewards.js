@@ -119,7 +119,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (1).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -131,7 +131,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (2).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -143,7 +143,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (3).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -155,7 +155,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (4).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -167,7 +167,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (5).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -179,7 +179,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (6).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -191,7 +191,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (7).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -203,7 +203,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-5">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (8).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -323,7 +323,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-6">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (1).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -335,7 +335,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-6">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (2).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
@@ -347,7 +347,7 @@ export default function Home() {
                                                     <div className="tf-card-box style-6">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
+                                                            <img src="/assets/images/box-item/box (3).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">

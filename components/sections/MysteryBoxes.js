@@ -118,11 +118,11 @@ export default function MysteryBoxes({}) {
                                                     <div className="tf-card-box style-7">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-03.jpg" alt="" />
+                                                                <img src="/assets/images/box-item/box (1).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal2} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -130,11 +130,11 @@ export default function MysteryBoxes({}) {
                                                     <div className="tf-card-box style-7">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                                <img src="/assets/images/box-item/box (2).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal2} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -142,11 +142,11 @@ export default function MysteryBoxes({}) {
                                                     <div className="tf-card-box style-7">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-02.jpg" alt="" />
+                                                                <img src="/assets/images/box-item/box (3).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal2} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -154,11 +154,11 @@ export default function MysteryBoxes({}) {
                                                     <div className="tf-card-box style-7">
                                                         <div className="card-media">
                                                             <Link href="#">
-                                                                <img src="/assets/images/box-item/about-us-01.jpg" alt="" />
+                                                                <img src="/assets/images/box-item/box (5).png" alt="" />
                                                             </Link>
                                                         </div>
                                                         <div className="button-place-bid">
-                                                            <a onClick={handleBidModal2} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                        <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -222,11 +222,11 @@ export default function MysteryBoxes({}) {
                             </div>
                             <div className="widget-content-inner" style={{ display: `${activeIndex === 1 ? "block" : "none"}` }}>
                                 <div className="wrap-box-card">
-                                    <div className="col-item">
+                                <div className="col-item">
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-01.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
@@ -236,10 +236,10 @@ export default function MysteryBoxes({}) {
                                                     <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-01.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -248,8 +248,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -257,20 +257,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-02.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-02.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -279,8 +279,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -288,20 +288,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-03.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-03.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -310,8 +310,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -319,20 +319,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-04.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-04.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -341,8 +341,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -350,20 +350,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-01.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-01.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -372,8 +372,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -381,20 +381,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-02.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-02.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -403,8 +403,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -412,20 +412,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-03.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-03.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -434,8 +434,8 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -443,20 +443,20 @@ export default function MysteryBoxes({}) {
                                         <div className="tf-card-box style-1">
                                             <div className="card-media">
                                                 <Link href="#">
-                                                    <img src="assets/images/box-item/card-item-04.jpg" alt="" />
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
                                                 </Link>
                                                 <span className="wishlist-button icon-heart" />
                                                 <div className="featured-countdown">
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                    <a onClick={handleBidModal} href="#" className="tf-button"><span>Place Bid</span></a>
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
                                                 </div>
                                             </div>
-                                            <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
                                             <div className="author flex items-center">
                                                 <div className="avatar">
-                                                    <img src="assets/images/avatar/avatar-box-04.jpg" alt="Image" />
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Created by:</span>
@@ -465,8 +465,256 @@ export default function MysteryBoxes({}) {
                                             </div>
                                             <div className="divider" />
                                             <div className="meta-info flex items-center justify-between">
-                                                <span className="text-bid">Current Bid</span>
-                                                <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -485,42 +733,13 @@ export default function MysteryBoxes({}) {
                     <div className="widget widget-recently">
                         <h5 className="title-widget">Largest Purchases</h5>
                         <div className="card-small-main">
-                            <img src="assets/images/blog/sidebar-05.jpg" alt="" />
+                            <img src="assets/images/box-item/box (11).png" alt="" />
                             <div className="card-bottom">
                                 <h5><Link href="#">Gucci Box</Link></h5>
                                 <span className="date">16hr ago</span>
                             </div>
                         </div>
-                        <div className="card-small">
-                            <div className="author">
-                                <img src="assets/images/blog/sidebar-06.jpg" alt="" />
-                                <div className="info">
-                                    <h6><Link href="#">Razer Box</Link></h6>
-                                    <p><Link href="#">$100</Link></p>
-                                </div>
-                            </div>
-                            <span className="date">Mon, 08 May </span>
-                        </div>
-                        <div className="card-small">
-                            <div className="author">
-                                <img src="assets/images/blog/sidebar-07.jpg" alt="" />
-                                <div className="info">
-                                    <h6><Link href="#">Apple Box</Link></h6>
-                                    <p><Link href="#">$300</Link></p>
-                                </div>
-                            </div>
-                            <span className="date">Mon, 08 May </span>
-                        </div>
-                        <div className="card-small">
-                            <div className="author">
-                                <img src="assets/images/blog/sidebar-08.jpg" alt="" />
-                                <div className="info">
-                                    <h6><Link href="#">Movie Box</Link></h6>
-                                    <p><Link href="#">$200</Link></p>
-                                </div>
-                            </div>
-                            <span className="date">Mon, 08 May </span>
-                        </div>
+                     
                     </div>
 
 
@@ -531,7 +750,7 @@ export default function MysteryBoxes({}) {
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-01.png" alt="" />
+                            <img src="assets/images/box-item/box (9).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Pokemon Box</Link></h6>
                                     <span><Link href="#">$300</Link></span>
@@ -541,7 +760,7 @@ export default function MysteryBoxes({}) {
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-02.png" alt="" />
+                            <img src="assets/images/box-item/box (10).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Apple Box</Link></h6>
                                     <span><Link href="#">$200</Link></span>
@@ -551,7 +770,7 @@ export default function MysteryBoxes({}) {
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-03.png" alt="" />
+                            <img src="assets/images/box-item/box (4).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Designer Box</Link></h6>
                                     <span><Link href="#">$150</Link></span>
@@ -561,7 +780,7 @@ export default function MysteryBoxes({}) {
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-04.png" alt="" />
+                            <img src="assets/images/box-item/box (11).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Gucci Box</Link></h6>
                                     <span><Link href="#">$300</Link></span>
@@ -571,9 +790,9 @@ export default function MysteryBoxes({}) {
                         </div>
                         <div className="widget-creators-item flex items-center">
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-01.png" alt="" />
+                            <img src="assets/images/box-item/box (6).png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Razer Box</Link></h6>
+                                    <h6><Link href="#">Supreme Box</Link></h6>
                                     <span><Link href="#">@100</Link></span>
                                 </div>
                             </div>
@@ -590,7 +809,7 @@ export default function MysteryBoxes({}) {
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">1. </div>
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-01.png" alt="" />
+                            <img src="assets/images/avatar/avatar (1).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Michael Burns</Link></h6>
                                 </div>
@@ -599,7 +818,7 @@ export default function MysteryBoxes({}) {
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">2. </div>
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-02.png" alt="" />
+                                <img src="assets/images/avatar/avatar (5).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Brooklyn Simmons</Link></h6>
                                 </div>
@@ -608,7 +827,7 @@ export default function MysteryBoxes({}) {
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">3. </div>
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-03.png" alt="" />
+                            <img src="assets/images/avatar/avatar (4).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Rhys James</Link></h6>
                                 </div>
@@ -617,20 +836,20 @@ export default function MysteryBoxes({}) {
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="order">4. </div>
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-04.png" alt="" />
+                            <img src="assets/images/avatar/avatar (3).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Ash Roggins</Link></h6>
-                                    <span><Link href="#">@themes</Link></span>
+                                    <span><Link href="#"></Link></span>
                                 </div>
                             </div>
                         </div>
                         <div className="widget-creators-item flex items-center">
                             <div className="order">5. </div>
                             <div className="author flex items-center flex-grow">
-                                <img src="assets/images/avatar/avatar-small-01.png" alt="" />
+                            <img src="assets/images/avatar/avatar (2).png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Tom Sons</Link></h6>
-                                    <span><Link href="#">@themes</Link></span>
+                                    <span><Link href="#"></Link></span>
                                 </div>
                             </div>
                         </div>

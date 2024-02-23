@@ -83,26 +83,26 @@ export default function Home() {
                                             <div className="widget-content-inner" style={{ display: `${activeIndex === 1 ? "block" : "none"}` }}>
                                                 <div className="widget-table-ranking">
                                                     <div data-wow-delay="0s" className="wow fadeInUp table-ranking-heading">
-                                                        <div className="column1">
-                                                            <h3>Collection</h3>
+                                                    <div className="column1">
+                                                            <h3>Champion</h3>
                                                         </div>
                                                         <div className="column2">
-                                                            <h3>Volume</h3>
+                                                            <h3>Experience</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>24h %</h3>
+                                                            <h3>Exp Lost 24h %</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>7d %</h3>
+                                                            <h3>Exp Lost 7d %</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Floor price</h3>
+                                                            <h3>Box Value Average</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Owners</h3>
+                                                            <h3>Value Opened</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Items</h3>
+                                                            <h3>Recieved Value</h3>
                                                         </div>
                                                     </div>
                                                     <div className="table-ranking-content">
@@ -409,26 +409,26 @@ export default function Home() {
                                             <div className="widget-content-inner" style={{ display: `${activeIndex === 2 ? "block" : "none"}` }}>
                                                 <div className="widget-table-ranking">
                                                     <div className="table-ranking-heading">
-                                                        <div className="column1">
-                                                            <h3>Collection</h3>
+                                                    <div className="column1">
+                                                            <h3>Champion</h3>
                                                         </div>
                                                         <div className="column2">
-                                                            <h3>Volume</h3>
+                                                            <h3>Experience</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>24h %</h3>
+                                                            <h3>Exp Lost 24h %</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>7d %</h3>
+                                                            <h3>Exp Lost 7d %</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Floor price</h3>
+                                                            <h3>Box Value Average</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Owners</h3>
+                                                            <h3>Value Opened</h3>
                                                         </div>
                                                         <div className="column">
-                                                            <h3>Items</h3>
+                                                            <h3>Recieved Value</h3>
                                                         </div>
                                                     </div>
                                                     <div className="table-ranking-content">
