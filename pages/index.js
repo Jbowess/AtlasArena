@@ -18,7 +18,7 @@ export default function Home() {
                 <Seller1 />              {/* top prize winners*/}
                 <Counter />              {/* how to/number of players*/}
                 <FeaturedItem2 />        {/* live winners*/}
-                <DiscoverItem6 />        {/* Loot box list*/}
+                {/* <DiscoverItem6 />        Loot box list */}
                 <TopCollector1 />        {/* atlas banner*/} 
                 <FeaturedItem1 />        {/* social media posts*/}
                 {/* <TopCollections1 />      loyalty program */}

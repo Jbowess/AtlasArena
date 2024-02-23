@@ -10,7 +10,7 @@ export default function FeaturedItem2() {
                         <div className="col-md-12">
                             <div className="heading-section pb-20">
                                 <h2 className="tf-title">Live Atlas Winners</h2> 
-                                <p className="tf-subtitle">Witness the victories of our live gaming champions, showcasing unmatched skill, strategy, and triumph in the competitive arena.</p>
+                                <p className="tf-subtitle">Witness the victories of our live unboxing champions, you' never know what great rewards you can recieve with Atlas Arena today!</p>
                                 {/* <Link href="/explore-3" >Discover more <i className="icon-arrow-right2" /></Link> */}
                             </div>
 

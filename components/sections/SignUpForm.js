@@ -159,13 +159,13 @@ const SignUpForm = ({ onClose }) => {
             </div>
             <div className="welcome-text">
               <h2>Join Atlas Arena</h2>
-              <p>Get up to $5,500 bonus + 300 Free Spins</p>
+              <p> </p>
             </div>
             <div className="additional-info">
-              <p>24/7 support service</p>
-              <p>VIP players club</p>
-              <p>Quick payouts</p>
-              <p>More than 9,000 games for every taste.</p>
+              <p>24/7 Support Service</p>
+              <p>VIP Unboxing Club</p>
+              <p>Quick Loot Box Shipping</p>
+              <p></p>
             </div>
             <div className="payment-images">
               {/* Add small payment images here */}

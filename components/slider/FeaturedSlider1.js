@@ -64,148 +64,90 @@ export default function FeaturedSlider1() {
             <div className="featured pt-10 swiper-container carousel">
                 <Swiper {...swiperOptions}>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (1).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
+                            <div className="card-media">
+                                <Link href="#">
+                                    <img src="/assets/images/box-item/testimonial (2).png" alt="" />
+                                </Link>
+                                <span className="wishlist-button icon-heart" />
+                            </div>
 
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@KathrynMurphy</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (3).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (4).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (5).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (6).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (7).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
+                        <div className="tf-card-box style-4" onClick={openSignUpModal}>
                             <div className="card-media">
                                 <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
+                                    <img src="/assets/images/box-item/testimonial (8).png" alt="" />
                                 </Link>
                                 <span className="wishlist-button icon-heart" />
                             </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                            <div className="card-media">
-                                <Link href="#">
-                                    <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
-                                </Link>
-                                <span className="wishlist-button icon-heart" />
-                            </div>
-                            <h5 className="name">Dayco serpentine belt</h5>
-                            <div className="author flex items-center">
-                                <div className="info">
-                                    <span>Created by:</span>
-                                    <h6>@CodyFisher</h6>
-                                </div>
-                            </div>
-                            <div className="divider" />
+
                         </div>
                     </SwiperSlide>
                 </Swiper>

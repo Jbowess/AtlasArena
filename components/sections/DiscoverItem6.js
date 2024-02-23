@@ -26,7 +26,7 @@ export default function DiscoverItem6() {
                             <div className="heading-section pb-30">
                                 <h2 className="tf-title ">Featured Loot Boxes</h2>
                                 <Link href="/explore-1" >View All Boxes <i className="icon-arrow-right2" /></Link>
-                                <p className="tf-subtitle">Experience unparalleled excitement with our powerhouse loot boxes, featuring highly exclusive treasures. Defy limits, dominate the competitive arena, and prove your mastery with Atlas!</p>
+                                <p className="tf-subtitle">Experience unparalleled excitement with our powerhouse loot boxes, featuring highly exclusive treasures. Defy limits, recieve great unboxing rewards in atlas arena, prove your mastery with Atlas!</p>
 
                             </div>
                         </div>

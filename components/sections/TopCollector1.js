@@ -68,7 +68,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Game Informer</Link></h5>
@@ -78,7 +77,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-02.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">PC Gamer</Link></h5>
@@ -88,7 +86,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-03.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Global Gaming Business Magazine</Link></h5>
@@ -98,7 +95,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-04.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">iGaming Business</Link></h5>
@@ -108,7 +104,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Polygon</Link></h5>
@@ -118,7 +113,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-02.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Casino Journal</Link></h5>
@@ -128,7 +122,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-03.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Gambling Insider</Link></h5>
@@ -138,7 +131,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-04.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">G3 Magazine</Link></h5>
@@ -148,7 +140,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Casino Life & Business Magazine</Link></h5>
@@ -158,7 +149,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-02.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Inc. Magazine</Link></h5>
@@ -168,7 +158,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-03.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Entrepreneur</Link></h5>
@@ -178,7 +167,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-04.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Fast Company</Link></h5>
@@ -192,7 +180,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Wired</Link></h5>
@@ -202,7 +189,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-02.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">AffiliaXe</Link></h5>
@@ -212,7 +198,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-03.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">FeedFront Magazine</Link></h5>
@@ -222,7 +207,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-04.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">PerformanceIN</Link></h5>
@@ -232,7 +216,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Affiliate Marketing Magazine</Link></h5>
@@ -242,7 +225,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-02.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Nakamigos</Link></h5>
@@ -252,7 +234,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-03.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">InformationWeek</Link></h5>
@@ -262,7 +243,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-04.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">TechCrunch</Link></h5>
@@ -272,7 +252,6 @@ export default function TopCollector1() {
                             <SwiperSlide>
                                 <div className="tf-author-box style-1 text-center flex">
                                     <div className="author-avatar ">
-                                        <img src="/assets/images/avatar/avatar-small-01.png" alt="" className="avatar" />
                                     </div>
                                     <div className="author-infor ">
                                         <h5><Link href="/author-2">Nakamigos</Link></h5>

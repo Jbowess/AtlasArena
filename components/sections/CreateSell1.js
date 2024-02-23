@@ -66,8 +66,8 @@ export default function CreateSell1() {
                                     <img src="/assets/images/box-icon/icon-03.png" alt="" />
                                     <p>Step 3</p>
                                 </div>
-                                <h4 className="heading"><Link href="/contact-us">Compete In Skill-Based Games</Link></h4>
-                                <p className="content">Progress through each tier by winning skill-based games. The better you play, the greater the rewards</p>
+                                <h4 className="heading"><Link href="/contact-us">Consider Options</Link></h4>
+                                <p className="content">Immerse yourself in the thrill of the unboxing experience. With each opening, you'll be greeted with anticipation as you unveil the secrets hidden within.</p>
                                 <div className="arrow">
                                     <svg width={114} height={114} viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clipPath="url(#clip0_625_20131)">
@@ -91,7 +91,7 @@ export default function CreateSell1() {
                                     <p>Step 4</p>
                                 </div>
                                 <h4 className="heading"><Link href="/contact-us">Recieve Your Rewards</Link></h4>
-                                <p className="content">Outshine Atlas, grab exclusive rewards! Open your Loot box, triumph over us, and prove you're the best. Start Playing, Start Winning.</p>
+                                <p className="content">Outshine Atlas, grab exclusive rewards! Open your Loot box, and prove you're the best.</p>
                             </div>
                         </div>
                     </div>

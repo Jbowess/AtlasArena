@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CheckoutPage from 'C:\\Users\\61412\\Documents\\Business\\Atlas Arena\\Production\\open9\\pages\\checkout';
+import CheckoutPage from '../../pages/checkout';
 
 const CheckoutModal = ({ cartItems, isModalOpen, onClose }) => {
     // Open the modal when the component mounts and run the effect whenever `isModalOpen` changes

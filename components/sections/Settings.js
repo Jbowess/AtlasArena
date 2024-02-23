@@ -157,11 +157,11 @@ export default function Settings() {
 
                 <div className="side-bar">
                     <div className="widget widget-recently">
-                        <h5 className="title-widget">Most Victorious Wins</h5>
+                        <h5 className="title-widget">Largest Purchases</h5>
                         <div className="card-small-main">
                             <img src="assets/images/blog/sidebar-05.jpg" alt="" />
                             <div className="card-bottom">
-                                <h5><Link href="#">Gucci Boxes</Link></h5>
+                                <h5><Link href="#">Gucci Box</Link></h5>
                                 <span className="date">16hr ago</span>
                             </div>
                         </div>
@@ -169,8 +169,8 @@ export default function Settings() {
                             <div className="author">
                                 <img src="assets/images/blog/sidebar-06.jpg" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Propw</Link></h6>
-                                    <p><Link href="#">@themes</Link></p>
+                                    <h6><Link href="#">Razer Box</Link></h6>
+                                    <p><Link href="#">$100</Link></p>
                                 </div>
                             </div>
                             <span className="date">Mon, 08 May </span>
@@ -179,8 +179,8 @@ export default function Settings() {
                             <div className="author">
                                 <img src="assets/images/blog/sidebar-07.jpg" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Propw</Link></h6>
-                                    <p><Link href="#">@themes</Link></p>
+                                    <h6><Link href="#">Apple Box</Link></h6>
+                                    <p><Link href="#">$300</Link></p>
                                 </div>
                             </div>
                             <span className="date">Mon, 08 May </span>
@@ -189,8 +189,8 @@ export default function Settings() {
                             <div className="author">
                                 <img src="assets/images/blog/sidebar-08.jpg" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Propw</Link></h6>
-                                    <p><Link href="#">@themes</Link></p>
+                                    <h6><Link href="#">Movie Box</Link></h6>
+                                    <p><Link href="#">$200</Link></p>
                                 </div>
                             </div>
                             <span className="date">Mon, 08 May </span>
@@ -200,15 +200,15 @@ export default function Settings() {
 
                     <div className="widget widget-history">
                         <div className="flex items-center justify-between">
-                            <h5 className="title-widget">Live Wins</h5>
+                            <h5 className="title-widget">Live Purchases</h5>
                             <Link className="see-all" href="#">See all</Link>
                         </div>
                         <div className="widget-creators-item flex items-center mb-20">
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-01.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Lorem NFT sold</Link></h6>
-                                    <span><Link href="#">Sold at 1.32 ETH</Link></span>
+                                    <h6><Link href="#">Pokemon Box</Link></h6>
+                                    <span><Link href="#">$300</Link></span>
                                 </div>
                             </div>
                             <span className="time">Just now</span>
@@ -217,8 +217,8 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-02.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">New NFT uploaded</Link></h6>
-                                    <span><Link href="#">By Marisol Pena</Link></span>
+                                    <h6><Link href="#">Apple Box</Link></h6>
+                                    <span><Link href="#">$200</Link></span>
                                 </div>
                             </div>
                             <span className="time">1hr ago</span>
@@ -227,8 +227,8 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-03.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">You followed a creator</Link></h6>
-                                    <span><Link href="#">Jane Cooper</Link></span>
+                                    <h6><Link href="#">Designer Box</Link></h6>
+                                    <span><Link href="#">$150</Link></span>
                                 </div>
                             </div>
                             <span className="time">2hr ago</span>
@@ -237,8 +237,8 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-04.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">You placed a bid</Link></h6>
-                                    <span><Link href="#">Whirl wind NFT</Link></span>
+                                    <h6><Link href="#">Gucci Box</Link></h6>
+                                    <span><Link href="#">$300</Link></span>
                                 </div>
                             </div>
                             <span className="time">4hr ago</span>
@@ -247,8 +247,8 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-01.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">You followed a creator</Link></h6>
-                                    <span><Link href="#">Courtney Henry</Link></span>
+                                    <h6><Link href="#">Razer Box</Link></h6>
+                                    <span><Link href="#">@100</Link></span>
                                 </div>
                             </div>
                             <span className="time">16hr ago</span>
@@ -266,8 +266,7 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-01.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Brooklyn Simmons</Link></h6>
-                                    <span><Link href="#">@themes</Link></span>
+                                    <h6><Link href="#">Michael Burns</Link></h6>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +276,6 @@ export default function Settings() {
                                 <img src="assets/images/avatar/avatar-small-02.png" alt="" />
                                 <div className="info">
                                     <h6><Link href="#">Brooklyn Simmons</Link></h6>
-                                    <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
                         </div>
@@ -286,8 +284,7 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-03.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Brooklyn Simmons</Link></h6>
-                                    <span><Link href="#">@themes</Link></span>
+                                    <h6><Link href="#">Rhys James</Link></h6>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +293,7 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-04.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Brooklyn Simmons</Link></h6>
+                                    <h6><Link href="#">Ash Roggins</Link></h6>
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>
@@ -306,7 +303,7 @@ export default function Settings() {
                             <div className="author flex items-center flex-grow">
                                 <img src="assets/images/avatar/avatar-small-01.png" alt="" />
                                 <div className="info">
-                                    <h6><Link href="#">Brooklyn Simmons</Link></h6>
+                                    <h6><Link href="#">Tom Sons</Link></h6>
                                     <span><Link href="#">@themes</Link></span>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@ export default function FlatTitle6() {
                                 <h1> <br></br><h2></h2></h1>
                             </div>
                             <div className="content">
-                                <h1>ATLAS ARENA <br></br><h2>Compete for Real Loot</h2></h1>
+                                <h1>ATLAS ARENA <br></br><h2>Unbox Real Loot</h2></h1>
                                 <div className="flat-button flex">
                                     <Link href="explore-1" className="tf-button style-1 h50 w190 mr-10">Explore Boxes <i className="icon-arrow-up-right2" /></Link>
                                     <button onClick={openSignUpModal} className="tf-button style-1 h50 w190 active">Sign Up <i className="icon-wa" /></button>
@@ -49,9 +49,7 @@ export default function FlatTitle6() {
                                 <img className="absolute item10" src="/assets/images/item-background/item2.png" alt="" />
                             </div>
                             <div className="bg-home7">
-                                <TitileSlider6/>
-                                <TitileSlider7/>
-                                <TitileSlider6/>
+ 
                             </div>
                         </div>
                     </div>

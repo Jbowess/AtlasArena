@@ -44,15 +44,13 @@ export default function Counter() {
                                 
                                 <div className="tf-box-icon style-1 relative m-0">
                                     <div className="image">
-                                        <img src="/assets/images/box-icon/icon-01.png" alt="" />
                                         <p>Step 1</p>
                                     </div>
                                     <h4 className="heading"><Link href="/contact-us">Sign Up To Atlas</Link></h4>
-                                    <p className="content">Unleash your competitive edge and conquer challenges! Join Atlas today and be rewarded greatly for your efforts.</p>
+                                    <p className="content">Join Atlas today and be rewarded greatly for your efforts.</p>
                                 </div>
                                 <div className="tf-box-icon style-1 relative m-0">
                                     <div className="image">
-                                        <img src="/assets/images/box-icon/icon-02.png" alt="" />
                                         <p>Step 2</p>
                                     </div>
                                     <h4 className="heading"><Link href="/contact-us">Select a Loot Box</Link></h4>
@@ -60,19 +58,17 @@ export default function Counter() {
                                 </div>
                                 <div className="tf-box-icon style-1 relative m-0">
                                     <div className="image">
-                                        <img src="/assets/images/box-icon/icon-03.png" alt="" />
                                         <p>Step 3</p>
                                     </div>
-                                    <h4 className="heading"><Link href="/contact-us">Compete In Skill-Based Games</Link></h4>
-                                    <p className="content">Progress through each tier by winning skill-based games. The better you play, the greater the rewards</p>
+                                    <h4 className="heading"><Link href="/contact-us">Consider Options</Link></h4>
+                                    <p className="content">Immerse yourself in the thrill of the unboxing experience. With each opening, you'll be greeted with anticipation as you unveil the secrets hidden within.</p>
                                 </div>
                                 <div className="tf-box-icon style-1 relative m-0">
                                     <div className="image">
-                                        <img src="/assets/images/box-icon/icon-04.png" alt="" />
                                         <p>Step 4</p>
                                     </div>
                                     <h4 className="heading"><Link href="/contact-us">Recieve Your Rewards</Link></h4>
-                                    <p className="content">Outshine Atlas, grab exclusive rewards! Open your loot box, triumph over us, and prove you're the best. Start Playing, Start Winning.</p>
+                                    <p className="content">Outshine Atlas, grab exclusive rewards! Open your loot box, and prove you're the best.</p>
                                 </div>
                             </div>
                         </div>

@@ -23,10 +23,10 @@ export default function TitileSlider7() {
 
             <Swiper {...swiperOptions} className="swiper-container autoslider1reverse swiper-container-initialized swiper-container-vertical swiper-container-pointer-events">
                 <SwiperSlide>
-                    <img src="/assets/images/item-background/bg-home7-item3.png" alt="" />
+                    <img src="/assets/images/item-background/box (6).png" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/assets/images/item-background/bg-home7-item4.png" alt="" />
+                    <img src="/assets/images/item-background/box (9).png" alt="" />
                 </SwiperSlide>
             </Swiper>
         </>
