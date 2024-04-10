@@ -5,7 +5,7 @@ const client = new MongoClient(uri);
 
 export default async function handler(req, res) {
   console.log('Received a request:', req.method);
-
+ 
   try {
     await client.connect();
     const database = client.db("registration");
