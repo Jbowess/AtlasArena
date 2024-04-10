@@ -4,6 +4,7 @@ import { Menu } from '@headlessui/react'
 import Link from "next/link"
 import { useState } from "react"
 import SignUpForm from "components/sections/SignUpForm.js"
+import FlatTitle8 from "/components/sections/FlatTitle8";  // Importing FlatTitle6 component from the sections directory
 
 
 export default function Home() {
@@ -16,28 +17,53 @@ export default function Home() {
     const closeSignUpModal = () => {
       setIsSignUpModalOpen(false);
     };
+
+    const [isBidModal, setBidModal] = useState(false)
+    const handleBidModal = () => setBidModal(!isBidModal)
+    
+    const [showLootBoxOne, setShowLootBoxOne] = useState(false)
+    const handleLootBoxOne = (e) => {
+        e.preventDefault(); // Prevent the default behavior of the link
+        setShowLootBoxOne(true); // Updated function name
+        console.log("form clicked");
+    };
+    const handleCloseLootBoxOne = () => {
+        setShowLootBoxOne(false); // Updated function name
+    };
+
+
+
+    const [activeIndex, setActiveIndex] = useState(1)
+    const handleOnClick = (index) => {
+        setActiveIndex(index)
+    }
+
+    const [isBidModal2, setBidModal2] = useState(false)
+    const handleBidModal2 = () => setBidModal2(!isBidModal)
+
+    const [isActive, setIsActive] = useState({
+        status: false,
+        key: "",
+    })
+
+    const handleToggle = (key) => {
+        if (isActive.key === key) {
+            setIsActive({
+                status: false,
+            })
+        } else {
+            setIsActive({
+                status: true,
+                key,
+            })
+        }
+    }
     return (
         <>
 
             <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="flat-title-page">
-                        <div className="themesflat-container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <h1 className="heading text-center">Explore Product</h1>
-                                    <ul className="breadcrumbs flex justify-center">
-                                        <li className="icon-keyboard_arrow_right">
-                                            <Link href="/">Home</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#">Loot Boxes</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <FlatTitle8 />
                     <div className="tf-section-2 discover-item loadmore-12-item">
                         <div className="themesflat-container">
                             <div className="row">
@@ -51,7 +77,6 @@ export default function Home() {
                                                     </svg>
                                                     <span className="inner">Most Popular</span>
                                                 </Menu.Button>
-
                                             </Menu>
                                             <Menu as="div" className="dropdown">
                                                 <Menu.Button className="btn btn-secondary" type="button" id="dropdownMenuButton2" aria-haspopup="true" aria-expanded="false">
@@ -69,8 +94,13 @@ export default function Home() {
                                                     <span className="inner">Featured</span>
                                                 </Menu.Button>
                                             </Menu>
+                                            <div className="market-header flex items-center justify-between">
+
                                         </div>
+                                        </div>
+                                        
                                         <div className="soft-right">
+                                            
                                             <Menu as="div" className="dropdown">
                                                 <Menu.Button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" aria-haspopup="true" aria-expanded="false">
                                                     <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,454 +130,514 @@ export default function Home() {
                                 </div>
 
 
-                                <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-35.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
+                                <div className="widget-content-tab">
+                            <div className="market-header flex items-center justify-between">
+                                <div className="widget-search">
+                                    <input type="search" id="search" className="search-field style-1" placeholder="Search Loot Boxes..." name="s" title="Search for" required />
+                                </div>
+                                
+                            </div>
+                            <div className="widget-content-inner" style={{ display: `${activeIndex === 1 ? "block" : "none"}` }}>
+                                <div className="wrap-box-card">
+                                <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
                                             </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
                                             </div>
                                         </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-item">
+                                        <div className="tf-card-box style-1">
+                                            <div className="card-media">
+                                                <Link href="#">
+                                                    <img src="assets/images/box-item/box (4).png" alt="" />
+                                                </Link>
+                                                <span className="wishlist-button icon-heart" />
+                                                <div className="featured-countdown">
+                                                    <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
+                                                </div>
+                                                <div className="button-place-bid">
+                                                    <a onClick={handleLootBoxOne} href="#" className="tf-button"><span>Open Box</span></a>
+                                                </div>
+                                            </div>
+                                            <h5 className="name"><Link href="#">Designer Box</Link></h5>
+                                            <div className="author flex items-center">
+                                                <div className="avatar">
+                                                    <img src="assets/images/avatar/avatar (1).png" alt="Image" />
+                                                </div>
+                                                <div className="info">
+                                                    <span>Created by:</span>
+                                                    <h6><Link href="author-2.html">Marvin McKinney</Link> </h6>
+                                                </div>
+                                            </div>
+                                            <div className="divider" />
+                                            <div className="meta-info flex items-center justify-between">
+                                                <span className="text-bid">Price</span>
+                                                <h6 className="price gem"><i className="icon-gem" />120</h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-36.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-02.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-37.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-03.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-38.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-04.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-01.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-05.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-02.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-06.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-03.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-07.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-04.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-19.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.1s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-20.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-02.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.2s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-21.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-03.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-wow-delay="0.3s" className="wow fadeInUp fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-22.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-04.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-27.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-05.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-28.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-06.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-29.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-07.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                    <div className="tf-card-box style-1" onClick={openSignUpModal}>
-                                        <div className="card-media">
-                                            <Link href="#">
-                                                <img src="/assets/images/box-item/card-item-30.jpg" alt="" />
-                                            </Link>
-                                            <span className="wishlist-button icon-heart" />
-                                            <div className="button-place-bid">
-                                                <a onClick={openSignUpModal} href="#" className="tf-button"><span>Join Now</span></a>
-                                            </div>
-                                        </div>
-                                        <h5 className="name"><Link href="#">Dayco serpentine belt</Link></h5>
-                                        <div className="author flex items-center">
-                                            <div className="avatar">
-                                                <img src="/assets/images/avatar/avatar-box-01.jpg" alt="Image" />
-                                            </div>
-                                            <div className="info">
-                                                <span>Created by:</span>
-                                                <h6><Link href="/author-2">Kristin Watson</Link> </h6>
-                                            </div>
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="meta-info flex items-center justify-between">
-                                            <span className="text-bid">Current Bid</span>
-                                            <h6 className="price gem"><i className="icon-gem" />0,34</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
                                 <div className="col-md-12 load-more">
                                     <a id="button-loadmore" className="tf-button-loadmore" onClick={openSignUpModal}>
                                         <span >Load More</span>

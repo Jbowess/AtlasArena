@@ -101,13 +101,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                         <div className="cate-item"><Link href="#">HOME</Link></div>
                                     </li>
                                     <li>
-                                        <div className="cate-item"><Link href="#">FAQ's</Link></div>
-                                    </li>
-                                    <li>
                                         <div className="cate-item"><Link href="#">LOOT BOXES</Link></div>
                                     </li>
                                     <li>
                                         <div className="cate-item"><Link href="#">BATTLEPASS</Link></div>
+                                    </li>
+                                    <li>
+                                        <div className="cate-item"><Link href="#">FAQ's</Link></div>
                                     </li>
                                 </ul>
                             </div>
@@ -117,7 +117,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                     <li><Link href="#">Contact</Link></li>
                                     <li><Link href="#">How It Works</Link></li>
                                     <li><Link href="#">Customer Support</Link></li>
-                                    <li><Link href="#">Discord Community</Link></li>
                                 </ul>
                             </div>
                             <div className="widget">

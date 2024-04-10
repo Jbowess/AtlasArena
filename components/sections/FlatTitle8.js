@@ -9,7 +9,7 @@ import AutoSlider1 from '../slider/AutoSlider1'
 import AutoSlider2 from '../slider/AutoSlider2'
 import { useState } from "react"
 
-export default function FlatTitle6() {
+export default function FlatTitle8() {
 
     const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
@@ -23,18 +23,19 @@ export default function FlatTitle6() {
 
     return (
         <>
-            <div className="flat-pages-title-home7 relative">
+            <div className="flat-pages-title-home8 relative">
                 <div className="tf-bg-line" />
                 <div className="themesflat-container2">
                     <div className="row">
                         <div className="col-12 pages-title">
-                        <div className="content">
+                        <div className="content">                
+                       
                                 <h1> <br></br><h2></h2></h1>
                             </div>
                             <div className="content">
-                                <h1>ATLAS ARENA <br></br><h2>Skill-Based LootBoxes</h2></h1>
+                                <h1>LootBoxes <br></br><h2>Compete In Skill-Based Games</h2></h1>
+                                
                                 <div className="flat-button flex">
-                                    <Link href="explore-1" className="tf-button style-1 h50 w190 mr-10">Explore Boxes <i className="icon-arrow-up-right2" /></Link>
                                     <button onClick={openSignUpModal} className="tf-button style-1 h50 w190 active">Sign Up <i className="icon-wa" /></button>
                                 </div>
                             </div>
