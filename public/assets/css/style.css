@@ -929,8 +929,7 @@ label.error {
         background-size: cover;
         background-color: rgba(22, 22, 22, 1);
         background-attachment: fixed;
-
-        background-image: url(../images/backgroup-section/Ninja7.jpg);    border-radius: 30px;
+        background-image: url(../images/backgroup-section/samurai\ \(1\).png);    border-radius: 30px;
         overflow: hidden;
         position: relative;
 }
@@ -1688,7 +1687,7 @@ a:focus {
     flex-direction: column;
     gap: 30px;
     background: linear-gradient(#181818, #181818) padding-box,
-      linear-gradient(80deg, transparent 60%, #e81cff, #40c9ff) border-box;
+      linear-gradient(80deg, transparent 60%, #f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     width: 220px;
     padding: 50px 0px;
@@ -2478,7 +2477,7 @@ animation-delay: 0.8s;
     border-radius: 8px;
     overflow: hidden;
     background: linear-gradient(#181818, #181818) padding-box,
-    linear-gradient(145deg, transparent 5%,#e81cff, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 5%,#f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     font-size: 14px;
     font-family: inherit;
@@ -2500,7 +2499,7 @@ animation-delay: 0.8s;
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url(../images/item-background/Ninja13.jpg);
+    background-image: url(../images/backgroup-section/samurai\ \(8\).jpg);
     background-color: #181818;
     transition: 2s ease-in-out;
 }
@@ -2759,7 +2758,7 @@ button:hover {
     border-radius: 8px;
     overflow: hidden;
     background: linear-gradient(#212121, #212121) padding-box,
-    linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 35%,#f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     font-size: 14px;
     font-family: inherit;
@@ -2893,7 +2892,7 @@ button-specific:hover {
     border-radius: 10px; /* Reduce border radius */
     overflow: hidden;
     background: linear-gradient(#181818, #181818) padding-box,
-    linear-gradient(145deg, transparent 5%, #e81cff, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 5%, #f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     font-size: 16px;
     font-family: inherit;
@@ -3054,7 +3053,7 @@ button-specific:hover {
   .modal-container {
     position: relative;
     background: linear-gradient(#181818, #181818) padding-box,
-      linear-gradient(145deg, transparent 5%, #e81cff, #40c9ff) border-box;
+      linear-gradient(145deg, transparent 5%, #f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     border-radius: 15px;
     overflow: hidden;

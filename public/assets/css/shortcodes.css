@@ -135,14 +135,14 @@
     height: 44px;
     gap: 10px;
     flex-shrink: 0;
-    background-color: #ffffff;
+    background-color: #ffffffd7;
     color: rgb(0, 0, 0);
 }
 
 .tf-button.style-1:hover,
 .tf-button.style-1.active {
     color: #ffffff;
-    background-color: #962a2a;
+    background-color: #962a2ad0;
 }
 
 .tf-button.style-1.active:hover {
@@ -1593,7 +1593,7 @@
 /* ------------------------------ */
 .top-collector-wrapper {
     position: relative;
-    padding: 150px 0;
+    padding: 180px 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2988,7 +2988,7 @@ form label i.icon-star.active {
     padding: 70px 20px;
     overflow: hidden;
     background: linear-gradient(#181818, #181818) padding-box,
-      linear-gradient(270deg, transparent 50%, #e81cff, #40c9ff) border-box;
+      linear-gradient(270deg, transparent 50%, #f3f3f3, #40c9ff) border-box;
     border: 2px solid transparent;
     transition: all 0.4s ease-in-out;
     font-size: 16px;
@@ -3117,8 +3117,6 @@ form label i.icon-star.active {
     height: 100%;
     overflow-y: auto;
     padding-bottom: 115px;    
-    background-image: 
-    url(../images/item-background/panebackground.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;

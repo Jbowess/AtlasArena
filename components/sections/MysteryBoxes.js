@@ -6,6 +6,8 @@ const currentTime = new Date()
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import LootBoxOne from '../lootboxes/lootboxeone'
+import AutoSlider1 from '../slider/AutoSlider1'
+import AutoSlider2 from '../slider/AutoSlider2'
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -106,7 +108,9 @@ export default function MysteryBoxes({}) {
         <>
             <div className="wrapper-content">
                 <div className="inner-content">
+                    
                         <div className="themesflat-container">
+
                             <div className="row">
                                 <div className="col-12 pages-title">
                                     <div className="content">

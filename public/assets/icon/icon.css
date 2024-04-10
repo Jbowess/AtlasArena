@@ -197,7 +197,7 @@
 }
 .icon-file:before {
   content: "\e90c";
-  color: #f700ff;
+  color: #ff0000;
 }
 .icon-time:before {
   content: "\e90d";
