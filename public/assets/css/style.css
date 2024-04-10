@@ -1170,7 +1170,7 @@ a:focus {
 #main-nav>ul>li:hover>a,
 #main-nav>.menu>li:hover>a::after,
 #main-nav>.menu>li.current-menu-item>a::after {
-    color: #b44bfa;
+    color: #fa4b4b;
     opacity: 1;
 }
 
@@ -2223,7 +2223,7 @@ animation-delay: 0.8s;
   }
   
   ::-webkit-scrollbar-track {
-    background-color: #d12929; /* Change this to your background color if needed */
+    background-color: #000000; /* Change this to your background color if needed */
   }
 
 
@@ -2618,7 +2618,7 @@ animation-delay: 0.8s;
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #6A2A96;
+    border: 2px solid #962a2a;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -2626,7 +2626,7 @@ animation-delay: 0.8s;
 }
 
 .checkbox-container input:checked {
-    background-color: #6A2A96;
+    background-color: #962a2a;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
     background-size: 100%;
 }
@@ -2641,14 +2641,15 @@ button {
     background-color: #161616;
     color: #fff;
     padding: 12px 20px;
-    border: 2px solid #4E1B6D; /* Change button border color */
+    border: 2px solid #6d1b1b; /* Change button border color */
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #6A2A96;
+    background-color: #962a2a;
+    border: 2px solid #962a2a; /* Change button border color */
     color: #fff;
 }
 
@@ -2806,7 +2807,7 @@ button-specific {
     background-color: #9900ff;
     color: white;
     padding: 12px 20px;
-    border: 2px solid #6A2A96;
+    border: 2px solid #962a2a;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -2817,7 +2818,7 @@ button-specific:hover {
     color: #fff;
 }
 .right-side-specific button:hover {
-    background-color: #6A2A96;
+    background-color: #962a2a;
     color: #fff;
 }
 
@@ -3104,7 +3105,7 @@ button-specific:hover {
   }
   
   .tab-options button.active {
-    background-color: #421a5c;
+    background-color: #5c1a1a;
     color: #fff;
     
   }
@@ -3126,7 +3127,7 @@ button-specific:hover {
   .amount-selector button {
     background-color: #161518;
     color: rgb(255, 255, 255);
-    border: 1px solid #CC49ED;
+    border: 1px solid #ed4949;
     border-radius: 8px;
     padding: 10px;
     cursor: pointer;
@@ -3201,7 +3202,7 @@ button-specific:hover {
 
   .top-up-button {
     background-color: #181818;
-    color: #CC49ED;
+    color: #ed4949;
     padding: 0px 30px;
     border: 1px solid #ffffff;
     border-radius: 25px;

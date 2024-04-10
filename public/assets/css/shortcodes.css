@@ -317,7 +317,7 @@
 
 .tf-card-box:hover {
     transform: translateY(-10px);  
-    box-shadow: 0px 0px 10px 1px #e066ff;
+    box-shadow: 0px 0px 10px 1px #f73333;
 
 }
 
@@ -3215,7 +3215,7 @@ form label i.icon-star.active {
 }
 
 .admin_active .popup-cart .avatar_popup .proceed-to-checkout button:hover {
-    background-color: #7125a3; /* Hover color */
+    background-color: #a32525; /* Hover color */
 }
 
 .admin_active .popup-cart .avatar_popup .proceed-to-checkout p {

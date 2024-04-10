@@ -50,7 +50,7 @@ const swiperOptions = {
             slidesPerView: 4,
         },
         1400: {
-            slidesPerView: 5,
+            slidesPerView: 4,
         },
     },
 }
