@@ -58,7 +58,6 @@ export default function TopCollector1() {
             <div className="tf-section top-collector">
                 <div className="top-collector-wrapper">
                     <div className="bg-text">
-                        <h2>Top Collector</h2>
                     </div>
                     <div className="heading-section ">
                         <h2 className="tf-title">Atlas Arena Featured By</h2>

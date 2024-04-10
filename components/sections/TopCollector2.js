@@ -57,7 +57,6 @@ export default function TopCollector2() {
             <div className="tf-section top-collector">
                 <div className="top-collector-wrapper">
                     <div className="bg-text">
-                        <h2>Top Collector</h2>
                     </div>
                     <div className="heading-section ">
                         <h2 className="tf-title ">Top Collector Buys Today</h2>
