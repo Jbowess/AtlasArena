@@ -9,12 +9,38 @@ import AddFundsModal from '@/components/sections/AddFundsModal'; // Import your 
 import { useRouter } from 'next/router';
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
-    const [isSidebar, setSidebar] = useState(false);
-    const [showSignupForm, setShowSignupForm] = useState(false); // Updated state variable name
-    const [showLoginForm, setShowLoginForm] = useState(false);
 
+    const [isSidebar, setSidebar] = useState(false);
+    const [showSignupForm, setShowSignupForm] = useState(false);
+    const [showLoginForm, setShowLoginForm] = useState(false);
+    const router = useRouter();
+    const userData = router.query.userData ? JSON.parse(router.query.userData) : null;
+    const [activeIndex, setActiveIndex] = useState(1)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+    const [isFundsModalOpen, setIsFundsModalOpen] = useState(false);
+    const [accountBalance, setAccountBalance] = useState(0.00);
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [isMobileSidebar, setMobileSidebar] = useState(false)
+    const [isToggled, setToggled] = useState(false)
+    const [isToggled2, setToggled2] = useState(false)
+    const [isToggled3, setToggled3] = useState(false)
+
+    const [cartItems, setCartItems] = useState([
+        { name: 'Gucci Belt', price: '$100' },
+        { name: 'Iphone Case', price: '$50' },
+        { name: 'Airpods', price: '$310' },
+        { name: 'Film Camera', price: '$30' },
+        { name: 'Off-White Golden Shoes', price: '$510' },
+        { name: 'Shoe Laces Rainbow', price: '$8' },
+      ]);
+
+    const handleMobileSidebar = () => setMobileSidebar(!isMobileSidebar)
     const handleSidebar = () => setSidebar(!isSidebar);
-    
+    const handleToggle = () => setToggled(!isToggled)
+    const handleToggle2 = () => setToggled2(!isToggled2)
+
+
     const handleSignupButtonClick = (e) => {
         e.preventDefault(); // Prevent the default behavior of the link
         setShowSignupForm(true); // Updated function name
@@ -35,16 +61,15 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
         setShowLoginForm(false);
     };
 
+    const handleLogin = () => {
+        // Perform login actions (e.g., set state, redirect user)
+        setIsLoggedIn(true);
+    };
 
-    const router = useRouter(); // Initialize the router
-    const userData = router.query.userData ? JSON.parse(router.query.userData) : null;
-    console.log(userData)
-
-    const [activeIndex, setActiveIndex] = useState(1)
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-    const [isFundsModalOpen, setIsFundsModalOpen] = useState(false);
-    const [accountBalance, setAccountBalance] = useState(0.00);
+    const handleLogout = () => {
+        // Handle logout logic
+        setIsLoggedIn(false);
+      };
 
     const handleLootBoxClick = (newIndex) => {
         // Update your state or perform any action with the new index here
@@ -54,16 +79,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     const handleOnClick = (index) => {
         setActiveIndex(index)
     }
-    const [cartItems, setCartItems] = useState([
-        { name: 'Gucci Belt', price: '$100' },
-        { name: 'Iphone Case', price: '$50' },
-        { name: 'Airpods', price: '$310' },
-        { name: 'Film Camera', price: '$30' },
-        { name: 'Off-White Golden Shoes', price: '$510' },
-        { name: 'Shoe Laces Rainbow', price: '$8' },
-
-
-      ]);
 
     const handleProceedToCheckout = () => {
         setIsModalOpen(true);
@@ -78,15 +93,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
         setCartItems([...cartItems, cardData]);
       };
 
-
-    const [isToggled, setToggled] = useState(false)
-    const handleToggle = () => setToggled(!isToggled)
-
-    const [isToggled2, setToggled2] = useState(false)
-    const handleToggle2 = () => setToggled2(!isToggled2)
-
-    const [isToggled3, setToggled3] = useState(false)
-    
     const handleToggle3 = () => {
         console.log('Toggle Cart Clicked');
         setToggled3(!isToggled3);
@@ -102,10 +108,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
         // You may want to refresh the account balance or perform other actions here
       };
 
-
-    const [isMobileSidebar, setMobileSidebar] = useState(false)
-    const handleMobileSidebar = () => setMobileSidebar(!isMobileSidebar)
-
     // Calculations For Cart Costs
       // Additional fees
         const processingFee = 4.5;
@@ -119,13 +121,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     }, 0);
 
       const grandTotal = processingFee + shippingFee + taxAmount;
-
-
-
-
-
-
-
 
     
     return (
@@ -150,6 +145,15 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                     <Menu />
                                 </nav>{/* /#main-nav */}
                                 <div className="flat-wallet flex">
+                                {!isLoggedIn ? (
+                                    <>
+                                {/* Display login form when showLoginForm is true */}
+                                    {showLoginForm && (
+                                        <LoginForm
+                                            onClose={handleCloseLoginForm}
+                                            onLogin={handleLogin} // Pass handleLogin function
+                                        />
+                                    )}
                                     <div id="wallet-header">
                                         <Link href="/market" onClick={handleSignupButtonClick} className="tf-button style-1">
                                             <span>Sign up</span>
@@ -162,10 +166,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                             <i className="icon-wa" />
                                         </Link>
                                     </div>
-                                    
-
-                                    <div className="admin_active" id="header_admin">
-                            <div className="popup-notification relative">
+                                    </>
+                                ) : (
+                                    <>                                
+                                <div className="admin_active" id="header_admin">
+                                <div className="popup-notification relative">
                                 <button className="funds" onClick={handleOpenFundsModal}>
                                     ${accountBalance.toFixed(2)} <span>+</span>
                                 </button>
@@ -253,7 +258,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                                     </svg>
                                                     <span>Battle Pass</span>
                                                 </Link>
-                                                <Link className="block" href="login.html" id="logout">
+                                                <Link className="block" onClick={() => setIsLoggedIn(false)} href="login.html" id="logout">
                                                     <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.9668 18.3057H2.49168C2.0332 18.3057 1.66113 17.9335 1.66113 17.4751V2.52492C1.66113 2.06644 2.03324 1.69437 2.49168 1.69437H9.9668C10.4261 1.69437 10.7973 1.32312 10.7973 0.863828C10.7973 0.404531 10.4261 0.0332031 9.9668 0.0332031H2.49168C1.11793 0.0332031 0 1.15117 0 2.52492V17.4751C0 18.8488 1.11793 19.9668 2.49168 19.9668H9.9668C10.4261 19.9668 10.7973 19.5955 10.7973 19.1362C10.7973 18.6769 10.4261 18.3057 9.9668 18.3057Z" fill="white" />
                                                         <path d="M19.7525 9.40904L14.7027 4.42564C14.3771 4.10337 13.8505 4.10755 13.5282 4.43396C13.206 4.76036 13.2093 5.28611 13.5366 5.60837L17.1454 9.16982H7.47508C7.01578 9.16982 6.64453 9.54107 6.64453 10.0004C6.64453 10.4597 7.01578 10.8309 7.47508 10.8309H17.1454L13.5366 14.3924C13.2093 14.7147 13.2068 15.2404 13.5282 15.5668C13.691 15.7313 13.9053 15.8143 14.1196 15.8143C14.3306 15.8143 14.5415 15.7346 14.7027 15.5751L19.7525 10.5917C19.9103 10.4356 20 10.2229 20 10.0003C20 9.77783 19.9111 9.56603 19.7525 9.40904Z" fill="white" />
@@ -265,7 +270,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                     </div>
                                 </div>
                             </div>
-
+                        </>
+                    )}
                                     <div className="canvas" onClick={handleSidebar}>
                                         <span />
                                     </div>
@@ -354,14 +360,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                     <SignUpForm onClose={handleCloseSignupForm} />
                 </>
             )}
-                        {console.log('showLoginForm:', showLoginForm)}
-            {showLoginForm && (
-                <>
-                    {console.log('Rendering LoginForm')}
-                    <LoginForm onClose={handleCloseLoginForm} />
-                </>
-            )}
-
         </>
     )
 }

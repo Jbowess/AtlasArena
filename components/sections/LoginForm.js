@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import SignUpForm from "components/sections/SignUpForm.js";
 
-const LoginForm = ({ onClose }) => {
+const LoginForm = ({ onClose, onLogin }) => {
+  const router = useRouter();
 
-  const router = useRouter(); 
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginStatus, setLoginStatus] = useState({});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
   const openSignUpModal = () => {
@@ -16,17 +19,13 @@ const LoginForm = ({ onClose }) => {
     setIsSignUpModalOpen(false);
   };
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loginStatus, setLoginStatus] = useState({});
-
   const handleSignIn = async () => {
-    // Add your logic for signing in
-    // You can use the email and password here
-    const formData = {
-      email,
-      password,
-    };
+    if (!email || !password) {
+      setLoginStatus({ success: false, message: 'Please enter email and password' });
+      return;
+    }
+
+    const formData = { email, password };
 
     try {
       const response = await fetch('/api/signin', {
@@ -37,18 +36,15 @@ const LoginForm = ({ onClose }) => {
         body: JSON.stringify(formData),
       });
 
-    if (response.ok) {
-      const { success, message, userData } = await response.json();
-      setLoginStatus({ success, message });
+      if (response.ok) {
+        const { success, message, userData } = await response.json();
+        setLoginStatus({ success, message });
 
-      // Navigate to the market.js page with user information
-      if (success) {
-        router.push({
-          pathname: '/market',
-          query: { userData: JSON.stringify(userData) },
-        });
-      }
-          } else {
+        if (success) {
+          onLogin(); // Trigger onLogin function upon successful login
+          console.log("User logged in successfully");
+        }
+      } else {
         const data = await response.json();
         setLoginStatus({ success: false, message: data.message || 'Invalid credentials' });
       }
@@ -63,9 +59,9 @@ const LoginForm = ({ onClose }) => {
       <div className="login-form-specific">
         <div className="right-side-specific">
           <div className="close-button-specific" onClick={onClose}></div>
-            <h2 style={{ marginBottom: '30px', textAlign: 'left', marginTop: '-30px', fontSize: '24px' }}>   
+          <h2 style={{ marginBottom: '30px', textAlign: 'left', marginTop: '-30px', fontSize: '24px' }}>
             <img src="/assets/images/logo/Logo2.png" alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
-            </h2>
+          </h2>
           <input
             type="email"
             placeholder="Email"
@@ -89,12 +85,15 @@ const LoginForm = ({ onClose }) => {
             <div className="success-message">{loginStatus.message}</div>
           )}
 
-          {(!loginStatus.success && loginStatus.message) && (
+          {!loginStatus.success && loginStatus.message && (
             <div className="error-message">{loginStatus.message}</div>
           )}
 
           <p style={{ fontSize: '12px', marginTop: '10px' }}>
-            Don't have an account? <a href="#sign-up" style={{ fontSize: '12px' }} onClick={openSignUpModal} >Sign Up.</a>
+            Don't have an account?{' '}
+            <a href="#sign-up" style={{ fontSize: '12px' }} onClick={openSignUpModal}>
+              Sign Up.
+            </a>
           </p>
         </div>
       </div>
