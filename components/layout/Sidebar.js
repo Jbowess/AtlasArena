@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
 import useLivePurchases from 'components/layout/useLivePurchases'; // Adjust the path as necessary
 
 const SideBar = () => {
@@ -10,7 +8,6 @@ const SideBar = () => {
 
     return (
       <div className="side-bar2">
-        <h2 className="title-widget2"><FontAwesomeIcon icon={faBoxOpen} /> Dashboard</h2>
         <h5 className="title-widget2" style={{ marginTop: '20px' }}>Live Wins</h5> {/* Moved outside the scrollable container */}
         <div className="widget-history2" ref={scrollContainerRef}>
           {livePurchases.map((purchase) => (
@@ -29,3 +26,4 @@ const SideBar = () => {
       </div>
     );
 };
+export default SideBar;
