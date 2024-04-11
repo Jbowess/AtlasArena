@@ -8,7 +8,7 @@ const LoginForm = ({ onClose, onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginStatus, setLoginStatus] = useState({});
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
   const openSignUpModal = () => {
@@ -42,6 +42,8 @@ const LoginForm = ({ onClose, onLogin }) => {
 
         if (success) {
           onLogin(); // Trigger onLogin function upon successful login
+          setIsLoggedIn(true)
+          localStorage.setItem('isLoggedIn', 'true'); // Save login status in localStorage
           console.log("User logged in successfully");
         }
       } else {

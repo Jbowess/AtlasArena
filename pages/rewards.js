@@ -56,6 +56,13 @@ const swiperOptions2 = {
 import { useState } from "react"
 export default function Home() {
 
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+
+    useEffect(() => {
+        const storedLoginStatus = localStorage.getItem('isLoggedIn') === 'true';
+        setIsLoggedIn(storedLoginStatus);
+      }, []); // Run once on component mount to initialize isLoggedIn state
+
     const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
     const openSignUpModal = () => {

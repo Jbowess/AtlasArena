@@ -2,12 +2,20 @@ import BidModal from "@/components/elements/BidModal"
 import Layout from "@/components/layout/Layout"
 import { Menu } from '@headlessui/react'
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import SignUpForm from "components/sections/SignUpForm.js"
 import FlatTitle8 from "/components/sections/FlatTitle8";  // Importing FlatTitle6 component from the sections directory
 
 
 export default function Home() {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+
+    useEffect(() => {
+        const storedLoginStatus = localStorage.getItem('isLoggedIn') === 'true';
+        setIsLoggedIn(storedLoginStatus);
+      }, []); // Run once on component mount to initialize isLoggedIn state
+
     const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
     const openSignUpModal = () => {

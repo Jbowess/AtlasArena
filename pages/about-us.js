@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SignUpForm from "/components/sections/SignUpForm.js"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -32,6 +32,15 @@ const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
 })
 
 export default function Home() {
+
+
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+
+    useEffect(() => {
+        const storedLoginStatus = localStorage.getItem('isLoggedIn') === 'true';
+        setIsLoggedIn(storedLoginStatus);
+      }, []);
+      
 
     const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 

@@ -13,7 +13,8 @@ import TopCollector1 from "/components/sections/TopCollector1";      // Importin
 export default function Home() {
     return (
         <>
-            {/* Rendering Layout component with specific props */}
+            {/* Rendering Layout component with specific props */}            
+
             <Layout headerStyle={1} footerStyle={1} pageCls="home-1">
                 {/* Rendering FlatTitle6 component */}
                 <FlatTitle6 />
