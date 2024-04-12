@@ -3365,7 +3365,7 @@ a {
     overflow-y: auto;
     background: linear-gradient(180deg, #161616 0%, #570000 100%);
     color: white;
-    padding: 15px;
+    padding: 0px;
     box-sizing: border-box;
     z-index: 100000000000000000;
   }
@@ -3390,9 +3390,9 @@ a {
   /* Interactive Element Styles */
   .widget-history2 {
     flex-grow: 1;
-    background-color: #161616; /* Dark background for contrast */
-    border-radius: 10px;
-    margin: 20px 0;
+    background: linear-gradient(180deg, #161616 0%, #570000 100%);
+    border-radius: 8px;
+    margin: 10px 0;
     padding: 8px;
     overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -3403,43 +3403,52 @@ a {
     display: none; /* For WebKit browsers like Chrome and Safari */
 }
   
-  .widget-creators-item2 {
-    background: #900D0D; /* Dark red for items */
+.widget-creators-item2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This will ensure space between elements */
+    background: #202020;
     color: #FFF;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding: 10px;
-    border-radius: 5px;
-    transition: transform 0.2s ease;
-    animation: slideIn 0.5s ease-out;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    height: 65px;
+}
 
-  }
-  
-  .widget-creators-item2:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .author2 img {
-    width: 50px;
+.widget-creators-item2:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced hover effect */
+}
+
+.author2 img, .prize-photo {
+    width: 50px; /* Adjust size as necessary */
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #f14e4e; /* Red accent border */
-  }
-  
-  .info2 h6, .info2 span {
+    border: 2px solid #f14e4e; /* Maintain accent border */
+}
+
+.prize-photo {
+    margin-left: auto; /* Pushes the photo to the far right */
+    border-radius: 8px;
+    position: relative; /* No need for absolute if using flex */
+    width: 100px;
+    height: auto;
+}
+
+.info2 {
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px; /* Reduced padding to ensure space for the prize photo */
+    text-align: left;
+}
+
+.info2 h6, .info2 span {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  .info2 h6 {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .info2 span {
-    font-size: 14px;
-    color: #FFD700; /* Gold color for price */
-  }
+}
+
   
   .time2 {
     font-size: 12px;

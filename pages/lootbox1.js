@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import TierWindow from "./tierwindow";
+
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -79,22 +79,11 @@ const swiperOptions2 = {
 
 const currentTime = new Date()
 
-export default function Home({onClose}) {
+export default function Home() {
     
     const [isBidModal, setBidModal] = useState(false)
     const handleBidModal = () => setBidModal(!isBidModal)
     const [saleEnds, setSaleEnds] = useState(null);
-
-    const [showTierWindow, setShowTierWindow] = useState(false)
-        const handleTierWindow = (e) => {
-            e.preventDefault();
-            setShowTierWindow(true);
-        };
-        const handleCloseTierWindow = () => {
-            setShowTierWindow(false);
-        };
-
-
 
     useEffect(() => {
       // Calculate the future date and time
@@ -127,11 +116,10 @@ export default function Home({onClose}) {
     }, []);
     return (
         <>
-            <div className="loot-box-container">   
 
-                <div className="wrapper-content">
+            <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="tf-section-2 product-detail">
+                <div className="tf-section-2 product-detail">
                         <div className="themesflat-container">
                             <div className="row">
                                 <div data-wow-delay="0s" className="wow fadeInLeft col-md-6">
@@ -147,7 +135,6 @@ export default function Home({onClose}) {
                                     <div data-wow-delay="0s" className="wow fadeInRight infor-product">
                                         <div className="text">Atlas Arena <span className="icon-tick"><span className="path1" /><span className="path2" /></span></div>
                                         <div className="menu_card">
-                                        <div className="close-button2" onClick={onClose}></div>
 
                                         </div>
                                         <h2>Designer Box</h2>
@@ -175,7 +162,7 @@ export default function Home({onClose}) {
                                             <div className="text">Entry Price</div>
                                             <div className="flex justify-between">
                                                 <p>$7.99 <span>$15.99</span></p>
-                                                <Link href="#" className="tf-button style-1 h50 w216">Open Now<i className="icon-arrow-up-right2" /></Link>
+                                                <Link href="lootbox1tier1" className="tf-button style-1 h50 w216">Open Now<i className="icon-arrow-up-right2" /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -647,15 +634,8 @@ export default function Home({onClose}) {
                         </div>
                     </div>
                 </div>
-                </div>
-                {showTierWindow && (
-                    <>
-                    {console.log('Rendering Tier Window')}
-                    <TierWindow onClose={handleCloseTierWindow} />
-                    </>
-                )}
-                </div>
-
+                </Layout>
+ZZ
         </>
     )
 }

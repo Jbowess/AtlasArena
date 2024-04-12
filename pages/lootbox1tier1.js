@@ -7,18 +7,119 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
 
+const swiperOptions = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: false,
+    slidesPerView: 6,
+    observer: true,
+    grabCursor: true,
+    observeParents: true,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 3700,
+        disableOnInteraction: false
+    },
+    navigation: {
+        clickable: true,
+        nextEl: '.seller-next',
+        prevEl: '.seller-prev'
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 3
+        },
+        640: {
+            slidesPerView: 4
+        },
+        768: {
+            slidesPerView: 5
+        },
+        1070: {
+            slidesPerView: 6
+        }
+    }
+}
+
+const swiperOptions2 = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: false,
+    slidesPerView: 4,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 30,
+    navigation: {
+        clickable: true,
+        nextEl: '.slider-next',
+        prevEl: '.slider-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 30
+        }
+    }
+}
+
+
 const currentTime = new Date()
 
-export default function TierWindow({onClose}) {
+export default function Home() {
     
- 
+    const [isBidModal, setBidModal] = useState(false)
+    const handleBidModal = () => setBidModal(!isBidModal)
+    const [saleEnds, setSaleEnds] = useState(null);
 
+    useEffect(() => {
+      // Calculate the future date and time
+      const currentDate = new Date();
+      const futureDate = new Date();
+      futureDate.setDate(currentDate.getDate() + 2);
+      futureDate.setHours(21, 0, 0, 0); // Set time to 9 PM
+  
+      // Format the future date and time
+      const options = { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric',  };
+      const formattedDate = futureDate.toLocaleDateString('en-US', options);
+  
+      // Set the formatted date to state
+      setSaleEnds(formattedDate);
+  
+      // Update the countdown every second
+      const intervalId = setInterval(() => {
+        const currentTime = new Date();
+        if (currentTime >= futureDate) {
+          // Sale has ended
+          setSaleEnds('Sale has ended');
+          clearInterval(intervalId);
+        }
+      }, 1000);
+
+
+  
+      // Clear the interval on component unmount
+      return () => clearInterval(intervalId);
+    }, []);
     return (
         <>
-                <div className="tierwindow-container">   
-                <div className="tierwindow">
+
+            <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="tf-section-2 product-detail">
+                <div className="tf-section-2 product-detail">
                         <div className="themesflat-container">
                             <div className="row">
                                 <div data-wow-delay="0s" className="wow fadeInLeft col-md-6">
@@ -85,9 +186,9 @@ export default function TierWindow({onClose}) {
                             </div>                                
                         </div>
                     </div>
+
                 </div>
-            </div>
-        </div>
+                </Layout>
 
         </>
     )

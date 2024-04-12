@@ -5,7 +5,7 @@ import BidModal from '../elements/BidModal'
 const currentTime = new Date()
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import LootBoxOne from '../lootboxes/lootboxeone'
+import LootBoxOne from '../../pages/lootbox1'
 import AutoSlider1 from '../slider/AutoSlider1'
 import AutoSlider2 from '../slider/AutoSlider2'
 
