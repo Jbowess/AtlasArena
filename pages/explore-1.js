@@ -5,19 +5,19 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import SignUpForm from "components/sections/SignUpForm.js"
 import FlatTitle8 from "/components/sections/FlatTitle8";  // Importing FlatTitle6 component from the sections directory
-import LootBoxOne from '/pages/lootbox1'
+import lootbox1 from '/pages/lootbox1'
 
 
 export default function Home() {
 
-    const [showLootBoxOne, setShowLootBoxOne] = useState(false)
-    const handleLootBoxOne = (e) => {
+    const [showlootbox1, setShowlootbox1] = useState(false)
+    const handlelootbox1 = (e) => {
         e.preventDefault(); // Prevent the default behavior of the link
-        setShowLootBoxOne(true); // Updated function name
+        setShowlootbox1(true); // Updated function name
         console.log("form clicked");
     };
-    const handleCloseLootBoxOne = () => {
-        setShowLootBoxOne(false); // Updated function name
+    const handleCloselootbox1 = () => {
+        setShowlootbox1(false); // Updated function name
     };
 
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
@@ -157,7 +157,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -190,7 +190,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -223,7 +223,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -256,7 +256,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -289,7 +289,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -322,7 +322,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -355,7 +355,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -421,7 +421,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -454,7 +454,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -487,7 +487,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -520,7 +520,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -553,7 +553,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -586,7 +586,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -619,7 +619,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -652,7 +652,7 @@ export default function Home() {
                                                     <span className="js-countdown" data-timer={7500} data-labels="d,h,m,s"><div aria-hidden="true" className="countdown__timer"><span className="countdown__item" style={{ display: 'none' }}><span className="countdown__value countdown__value--0 js-countdown__value--0">0</span><span className="countdown__label">d</span></span><span className="countdown__item"><span className="countdown__value countdown__value--1 js-countdown__value--1">02</span><span className="countdown__label">h</span></span><span className="countdown__item"><span className="countdown__value countdown__value--2 js-countdown__value--2">04</span><span className="countdown__label">m</span></span><span className="countdown__item"><span className="countdown__value countdown__value--3 js-countdown__value--3">55</span><span className="countdown__label">s</span></span></div></span>
                                                 </div>
                                                 <div className="button-place-bid">
-                                                <Link href="/lootboxone" className="tf-button">
+                                                <Link href="/lootbox1" className="tf-button">
                                                 <span>Open Box</span>
                                                 </Link>
                                                 </div>
@@ -690,10 +690,10 @@ export default function Home() {
 
                 {isSignUpModalOpen && <SignUpForm onClose={closeSignUpModal} />}
             </Layout>
-                        {showLootBoxOne && (
+                        {showlootbox1 && (
                 <>
-                    {console.log('Rendering LootBoxOne')}
-                    <LootBoxOne onClose={handleCloseLootBoxOne} />
+                    {console.log('Rendering lootbox1')}
+                    <lootbox1 onClose={handleCloselootbox1} />
                 </>
             )}
         </>

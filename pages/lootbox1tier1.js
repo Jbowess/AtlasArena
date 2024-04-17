@@ -80,10 +80,12 @@ const swiperOptions2 = {
 const currentTime = new Date()
 
 export default function Home() {
-    
-    const [isBidModal, setBidModal] = useState(false)
-    const handleBidModal = () => setBidModal(!isBidModal)
+    const [showUnityGame, setShowUnityGame] = useState(false);
     const [saleEnds, setSaleEnds] = useState(null);
+
+    const handleButtonClick = () => {
+        setShowUnityGame(!showUnityGame); // Set showUnityGame state to true when button is clicked
+      };
 
     useEffect(() => {
       // Calculate the future date and time
@@ -114,6 +116,7 @@ export default function Home() {
       // Clear the interval on component unmount
       return () => clearInterval(intervalId);
     }, []);
+
     return (
         <>
 
@@ -179,17 +182,57 @@ export default function Home() {
                                                     <h5><Link href="/author-2">Razer Mouse</Link></h5>
                                                     <h6 className="price gem style-1"><i className="icon-gem" />$89.99</h6>
                                                 </div>
-                                            </div>                                        
-                                        <Link href="#" className="tf-button style-1 h50 w216">Play Now<i className="icon-arrow-up-right2" /></Link>
+                                            </div>             
+                                                                       
+                                        <button onClick={handleButtonClick} className="tf-button style-1 h50 w216">Play Now<i className="icon-arrow-up-right2" /></button>
                                     </div>
                                 </div>
                             </div>                                
                         </div>
                     </div>
-
+                {showUnityGame && (
+                    <div className="game-modal">
+                        <div className="game-frame">
+                            <iframe
+                                title="Unity Game"
+                                src="/games/Flappybird/index.html"  // Updated relative path from the public directory
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                            ></iframe>
+                            <button onClick={handleButtonClick} className="close-modal">X Close Game</button>
+                        </div>
+                    </div>
+                )}
                 </div>
                 </Layout>
-
+                <style jsx>{`
+                .game-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    z-index: 1000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .game-frame {
+                    position: relative;
+                    width: 80%;
+                    height: 80%;
+                }
+                .close-modal {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            `}</style>
         </>
     )
 }
